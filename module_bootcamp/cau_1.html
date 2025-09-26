@@ -1,10 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let n;
+    do {
+        n = +prompt("Nhập độ dài phần tử mảng");
+    } while (n <= 0 || n > 20 || n % 1 !== 0);
+
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        let num = +prompt(`Nhập số thứ ${i + 1}`);
+        arr.push(num);
+    }
+    alert(`Mảng vừa được tạo ${arr}`);
+
+    let sum = 0;
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] % 3 === 0 && arr[j] % 5 === 0) {
+            sum += arr[j];
+        }
+    }
+    alert(`Tổng các số là bội chung của 3 và 5 trong mảng là ${sum}`);
+</script>
 </body>
 </html>

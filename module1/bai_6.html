@@ -159,10 +159,6 @@
             let iD = prompt("Nhập mã học viên");
 
             //Điều kiện kiểm tra đúng định dạng
-
-            // while (!iD) {
-            //     iD = prompt("Không được để trống");
-            // }
             while (iD.length < 7) {
                 alert("Không đúng định dạng HV-XXXX");
                 iD = prompt("Nhập mã học viên");
@@ -194,6 +190,7 @@
                     }
                 }
             }
+
             //Điều kiện thêm mã học viên không được trùng lặp
             for (let i = 0; i < listStudent.length; i++) {
                 while (listStudent[i].getId().includes(iD)) {
@@ -249,9 +246,6 @@
         edit() {
             let flag = true;
             let iDToFix = prompt("Nhập mã học viên cần sữa chửa");
-            while (!iDToFix) {
-                iDToFix = prompt("Không được để trống");
-            }
             for (let i = 0; i < listStudent.length; i++) {
                 if (listStudent[i].getId() === iDToFix) {
                     let iD = prompt("Nhập mã học viên");
@@ -306,9 +300,6 @@
         del() {
             let flag = true;
             let iDToDelete = prompt("Nhập mã học viên cần xóa");
-            while (!iDToDelete) {
-                iDToDelete = prompt("Không được để trống");
-            }
             for (let i = 0; i < listStudent.length; i++) {
                 if (listStudent[i].getId() === (iDToDelete)) {
                     if (confirm("Bạn có chắc muốn xóa không?")) {

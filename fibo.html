@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function enterInput() {
+        let n;
+        do {
+            n = +prompt("Nhập độ dài mảng");
+            if (n <= 0) {
+                alert("Độ dài mảng không hợp lệ");
+            }
+        } while (n <= 0);
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            let num = +prompt(`Nhập số thứ ${i + 1}`);
+            arr.push(num);
+        }
+        return arr;
+    }
+
+    function checkFiBo(num) {
+        if (Number.isInteger(Math.sqrt((Math.pow(num, 2) * 5) - 4)) || Number.isInteger(Math.sqrt((Math.pow(num, 2) * 5) + 4))) {
+            return true;
+        }
+    }
+
+    function listFiBo(arr) {
+        let arrFiBo = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (checkFiBo(arr[i])) {
+                arrFiBo.push(arr[i]);
+            }
+        }
+        return arrFiBo;
+    }
+
+    function main() {
+        let arrInput = enterInput();
+        alert(`Mảng vừa tạo là: ${arrInput}`);
+        alert(`Các số Fibonacci trong mảng vừa nhập là: ${listFiBo(arrInput)}`);
+    }
+
+    main();
+
+</script>
 </body>
 </html>

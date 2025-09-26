@@ -6,11 +6,10 @@
 </head>
 <body>
 <script>
-    let string = prompt("Nhập ký tự");
-    let handleString = string.split(" ");
-    let stringArr = [];
 
-    function chuanHoaSau() {
+    function chuanHoaSau(string) {
+        let handleString = string.split(" ");
+        let stringArr = [];
         for (let i = 0; i < handleString.length; i++) {
             if (handleString[i] === "") {
                 handleString.splice(i, 1);
@@ -24,22 +23,27 @@
             stringArr.push(newString);
         }
         alert(`Hàm trước khi chuẩn hóa ${string}`);
-        alert(`Hàm sau khi chuẩn hóa ${stringArr.join(" ")}`)
+        alert(`Hàm sau khi chuẩn hóa ${stringArr.join(" ")}`);
+        return stringArr.join(" ");
 
     }
-    function maxLengthString(stringArr) {
-        let max = 0;
+
+    function maxLengthString(string) {
+        let maxLength ="";
+        let stringArr = string.split(" ");
         for (let i = 0; i < stringArr.length; i++) {
-            if (stringArr[i].length > max) {
-                max = stringArr[i];
+            if (stringArr[i].length > maxLength.length) {
+                maxLength = stringArr[i];
             }
         }
-        alert(`Từ dài nhất trong một xâu ký tự: ${max}`);
+        alert(`Từ dài nhất trong một xâu ký tự: ${maxLength}`);
+        alert(stringArr)
     }
 
     function main() {
-        chuanHoaSau(string);
-        maxLengthString(stringArr);
+        let string = prompt("Nhập ký tự");
+        let a = chuanHoaSau(string);
+        maxLengthString(a);
     }
 
     main();

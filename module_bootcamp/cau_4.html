@@ -1,10 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
+
+<style>
+    body {
+        justify-items: center;
+    }
+
+    td, th {
+        text-align: center;
+    }
+
+    th {
+        background-color: #343a40;
+        color: #cccccc;
+    }
+
+    td {
+        background-color: #cccccc;
+    }
+</style>
 <body>
-$END$
+<div>
+    <button onclick="quanLiKhachHang.add()">Thêm</button>
+    <h2 style="text-align: center">Quản lý khách hàng</h2>
+    <p id="table">Table</p>
+</div>
+
+<script>
+    class KhachHang {
+        #maKhachHang;
+        #tenKhachHang;
+        #soDienThoai;
+        #diaChi;
+        #email;
+
+        constructor(maKhachHang, tenKhachHang, soDienThoai, diaChi, email) {
+            this.#maKhachHang = maKhachHang;
+            this.#tenKhachHang = tenKhachHang;
+            this.#soDienThoai = soDienThoai;
+            this.#diaChi = diaChi;
+            this.#email = email;
+        }
+
+        getMaKhachHang() {
+            return this.#maKhachHang;
+        }
+
+        getTenKhachHang() {
+            return this.#tenKhachHang;
+        }
+
+        getSoDienThoai() {
+            return this.#soDienThoai;
+        }
+
+        getDiaChi() {
+            return this.#diaChi;
+        }
+
+        getEmail() {
+            return this.#email;
+        }
+    }
+
+    let danhSachKhachHang = [new KhachHang("01", "Nguyen Van A", "0123456789", "Đà Nẵng", "nvamail@.com"),
+        new KhachHang("02", "Nguyen Van B", "01234567811", "Đà Lạt", "nvbmail@.com"),
+        new KhachHang("03", "Nguyen Van C", "01234567810", "Hồ Chí Minh", "nvcmail@.com")];
+
+    class QuanLiKhachHang {
+        display() {
+            let stringTable = `<table border="1" style="border-collapse: collapse; width: 800px; height: 200px;">
+                            <tr> <th>Mã khách hàng</th> <th>Tên khách hàng</th> <th>Số điện thoại</th> <th> Địa chỉ</th> <th> Email</th> </tr>   `;
+            for (let i = 0; i < danhSachKhachHang.length; i++) {
+                stringTable += `<tr>
+                    <td>${danhSachKhachHang[i].getMaKhachHang()}</td>
+                    <td>${danhSachKhachHang[i].getTenKhachHang()}</td>
+                    <td>${danhSachKhachHang[i].getSoDienThoai()}</td>
+                    <td>${danhSachKhachHang[i].getDiaChi()}</td>
+                    <td>${danhSachKhachHang[i].getEmail()}</td>
+                </tr>`;
+            }
+            stringTable += `</table>`;
+
+            document.getElementById("table").innerHTML = stringTable;
+        }
+
+        add() {
+            let maKhachHang = prompt("Nhập mã khách hàng");
+            let tenKhachHang = prompt("Nhập tên khách hàng");
+            let soDienThoaiKhachHang = prompt("Nhập số điện thoại khách hàng");
+            let diaChiKhachHang = prompt("Nhập địa khách hàng");
+            let emailKhachHang = prompt("Nhập email khách hàng");
+
+            danhSachKhachHang.push(new KhachHang(maKhachHang, tenKhachHang, soDienThoaiKhachHang, diaChiKhachHang, emailKhachHang));
+            this.display();
+        }
+    }
+
+    let quanLiKhachHang = new QuanLiKhachHang();
+    quanLiKhachHang.display();
+</script>
 </body>
 </html>

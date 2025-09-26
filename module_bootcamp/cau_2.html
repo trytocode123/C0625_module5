@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let diem = +prompt("Nhập điểm");
+
+    function lamTronDiem(diem) {
+        if (diem < 0 || diem > 100 || diem % 1 !== 0) {
+            alert("Điểm không hợp lệ");
+            return diem;
+        } else if (diem < 48) {
+            alert("Trượt");
+            return diem;
+        } else {
+            let diemLamTron = 1;
+            for (let i = diem; i >= diem; i++) {
+                if (i % 5 === 0) {
+                    diemLamTron = i;
+                    break;
+                }
+            }
+            if (diemLamTron - diem < 3) {
+                return diemLamTron;
+            } else {
+                return diem;
+            }
+        }
+    }
+
+    alert(`Điểm sau khi làm tròn là ${lamTronDiem(diem)}`);
+</script>
 </body>
 </html>
