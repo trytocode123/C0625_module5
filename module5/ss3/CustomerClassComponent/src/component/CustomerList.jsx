@@ -33,7 +33,6 @@ class CustomerList extends Component {
         this.setState({
             showModal: true,
             customer: customer
-
         })
     }
 
