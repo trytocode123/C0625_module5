@@ -4,7 +4,6 @@ import "bootstrap/dist/js/bootstrap.js";
 import {getInfo} from "./service/CustomerList.js";
 
 function App() {
-
     return (
         <>
             <table className="table table-dark">
