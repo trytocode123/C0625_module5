@@ -47,6 +47,7 @@ const PlayerListComponent = ({playerList = [], setDeleteFlag, searchPlayerList})
                         <td>{player.position}</td>
                         <td>
                             <button onClick={() => handleToggleModal(player)} className={'btn btn-danger'}>Xóa</button>
+                            <button className={'btn btn-info'}>Chi tiết</button>
                         </td>
                     </tr>
                 ))}

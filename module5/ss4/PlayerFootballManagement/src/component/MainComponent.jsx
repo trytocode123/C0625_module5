@@ -5,7 +5,7 @@ import {useEffect, useRef, useState} from "react";
 import {addPlayer, getAll} from "../service/PlayerList.js";
 
 
-const InputComponent = () => {
+const MainComponent = () => {
     const [player, setPlayer] = useState({});
     const [playerList, setPlayerList] = useState([]);
     const [deleteFlag, setDeleteFlag] = useState(false);
@@ -102,4 +102,4 @@ const InputComponent = () => {
     </div>)
 }
 
-export default InputComponent;
+export default MainComponent;
