@@ -4,7 +4,6 @@ import MainComponent from "./component/MainComponent.jsx";
 
 function App() {
 
-
     return (
         <>
             <MainComponent/>
