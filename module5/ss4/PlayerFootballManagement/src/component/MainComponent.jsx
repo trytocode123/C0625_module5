@@ -1,8 +1,8 @@
 import PlayerListComponent from "./PlayerListComponent.jsx";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import { useEffect, useRef, useState } from "react";
-import { addPlayer, getAll } from "../service/PlayerList.js";
+import {useEffect, useRef, useState} from "react";
+import {addPlayer, getAll} from "../service/PlayerList.js";
 
 const MainComponent = () => {
     const inputRefId = useRef(null);
@@ -70,34 +70,36 @@ const MainComponent = () => {
                                 Nhập thông tin để thêm cầu thủ vào danh sách
                             </p>
 
-                            <hr className="my-3 opacity-25" />
+                            <hr className="my-3 opacity-25"/>
 
                             <h5 className="fw-semibold mb-3">Thông tin cầu thủ</h5>
 
                             <div className="row g-3">
                                 <div className="col-12 col-md-3">
-                                    <input ref={inputRefId} className="form-control form-control-sm" placeholder="ID" />
+                                    <input ref={inputRefId} className="form-control form-control-sm" placeholder="ID"/>
                                 </div>
 
                                 <div className="col-12 col-md-4">
-                                    <input ref={inputRefCode} className="form-control form-control-sm" placeholder="Mã cầu thủ" />
+                                    <input ref={inputRefCode} className="form-control form-control-sm"
+                                           placeholder="Mã cầu thủ"/>
                                 </div>
 
                                 <div className="col-12 col-md-5">
-                                    <input ref={inputRefName} className="form-control" placeholder="Tên cầu thủ" />
+                                    <input ref={inputRefName} className="form-control" placeholder="Tên cầu thủ"/>
                                 </div>
 
                                 <div className="col-6 col-md-4">
-                                    <input ref={inputRefDob} type="date" className="form-control form-control-sm" />
+                                    <input ref={inputRefDob} type="date" className="form-control form-control-sm"/>
                                 </div>
 
                                 <div className="col-6 col-md-4">
-                                    <input ref={inputRefPosition} className="form-control form-control-sm" placeholder="Vị trí" />
+                                    <input ref={inputRefPosition} className="form-control form-control-sm"
+                                           placeholder="Vị trí"/>
                                 </div>
 
                                 <div className="col-12 col-md-4">
                                     <div className="input-group input-group-sm">
-                                        <input ref={inputRefValue} className="form-control" placeholder="Giá trị (số)" />
+                                        <input ref={inputRefValue} className="form-control" placeholder="Giá trị (số)"/>
                                         <span className="input-group-text">VND</span>
                                     </div>
                                 </div>

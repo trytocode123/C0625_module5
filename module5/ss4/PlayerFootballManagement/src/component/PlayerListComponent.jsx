@@ -30,7 +30,8 @@ const PlayerListComponent = ({playerList = [], setDeleteFlag, searchPlayerList})
     return (
         <div>
             {/* Header */}
-            <div className="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between mb-3 gap-3">
+            <div
+                className="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between mb-3 gap-3">
                 <div>
                     <h3 className="mb-0">Danh sách cầu thủ</h3>
                     <small className="text-muted">Quản lý, xem và xóa cầu thủ</small>
@@ -62,7 +63,9 @@ const PlayerListComponent = ({playerList = [], setDeleteFlag, searchPlayerList})
                             <tbody>
                             {playerList.length === 0 && (
                                 <tr>
-                                    <td colSpan={7} className="text-center text-muted py-4">Chưa có cầu thủ trong danh sách.</td>
+                                    <td colSpan={7} className="text-center text-muted py-4">Chưa có cầu thủ trong danh
+                                        sách.
+                                    </td>
                                 </tr>
                             )}
 

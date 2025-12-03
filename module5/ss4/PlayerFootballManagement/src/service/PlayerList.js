@@ -76,7 +76,6 @@ export function deletePlayer(id) {
             break;
         }
     }
-    console.log("đã xóa ")
 }
 
 export function addPlayer(newPlayer) {
