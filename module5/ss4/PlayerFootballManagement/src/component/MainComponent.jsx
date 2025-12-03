@@ -29,15 +29,10 @@ const MainComponent = () => {
             id: inputRefId.current.value.trim(),
             code: inputRefCode.current.value.trim(),
             name: inputRefName.current.value.trim(),
-            dob: inputRefDob.current.value || "",
+            dob: inputRefDob.current.value,
             value: inputRefValue.current.value,
             position: inputRefPosition.current.value.trim()
         };
-
-        if (!playerAdd.id || !playerAdd.code || !playerAdd.name) {
-            alert("Vui lòng nhập: ID, Mã cầu thủ và Tên cầu thủ.");
-            return;
-        }
 
         addPlayer(playerAdd);
         setPlayer(playerAdd);
