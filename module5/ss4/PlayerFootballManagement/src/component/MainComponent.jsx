@@ -1,45 +1,46 @@
 import PlayerListComponent from "./PlayerListComponent.jsx";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import {useEffect, useRef, useState} from "react";
-import {addPlayer, getAll} from "../service/PlayerList.js";
-
+import { useEffect, useRef, useState } from "react";
+import { addPlayer, getAll } from "../service/PlayerList.js";
 
 const MainComponent = () => {
-    const [player, setPlayer] = useState({});
-    const [playerList, setPlayerList] = useState([]);
-    const [deleteFlag, setDeleteFlag] = useState(false);
-
     const inputRefId = useRef(null);
     const inputRefCode = useRef(null);
     const inputRefName = useRef(null);
     const inputRefDob = useRef(null);
     const inputRefValue = useRef(null);
     const inputRefPosition = useRef(null);
+
+    const [player, setPlayer] = useState({});
+    const [playerList, setPlayerList] = useState([]);
+    const [deleteFlag, setDeleteFlag] = useState(false);
+
     useEffect(() => {
-        setPlayerList(getAll);
+        setPlayerList(getAll());
     }, [player, deleteFlag]);
 
     const handleSearchPlayerList = (array) => {
-        if (array !== undefined) {
-            setPlayerList(array);
-            console.log("Đã gán lại được")
-        } else {
-            console.log("không gán được tham số")
-        }
-    }
+        if (array !== undefined) setPlayerList(array);
+    };
 
     const handleAddPlayer = () => {
         const playerAdd = {
-            id: inputRefId.current.value,
-            code: inputRefCode.current.value,
-            name: inputRefName.current.value,
-            dob: inputRefDob.current.value,
+            id: inputRefId.current.value.trim(),
+            code: inputRefCode.current.value.trim(),
+            name: inputRefName.current.value.trim(),
+            dob: inputRefDob.current.value || "",
             value: inputRefValue.current.value,
-            position: inputRefPosition.current.value
+            position: inputRefPosition.current.value.trim()
+        };
+
+        if (!playerAdd.id || !playerAdd.code || !playerAdd.name) {
+            alert("Vui lòng nhập: ID, Mã cầu thủ và Tên cầu thủ.");
+            return;
         }
-        setPlayer(playerAdd);
+
         addPlayer(playerAdd);
+        setPlayer(playerAdd);
 
         inputRefId.current.value = "";
         inputRefCode.current.value = "";
@@ -47,59 +48,81 @@ const MainComponent = () => {
         inputRefDob.current.value = "";
         inputRefValue.current.value = "";
         inputRefPosition.current.value = "";
-
-    }
+    };
 
     const handleReloadAfterDeletePlayer = () => {
-        setDeleteFlag(prevState => !prevState);
-    }
-    return (<div>
-        <h3>Thêm cầu thủ vào danh sách</h3>
-        <div className="input-group mb-3">
-            <span className="input-group-text" id="basic-addon1">ID: </span>
-            <input ref={inputRefId} type="text" className="form-control" placeholder="ID" aria-label="Username"
-                   aria-describedby="basic-addon1"/>
-        </div>
+        setDeleteFlag(prev => !prev);
+    };
 
-        <div className="input-group mb-3">
-            <span className="input-group-text" id="basic-addon1">Mã cầu thủ: </span>
-            <input ref={inputRefCode} type="text" className="form-control" placeholder="Nhập mã cầu thủ"
-                   aria-label="Username"
-                   aria-describedby="basic-addon1"/>
-        </div>
+    return (
+        <div className="container my-4">
 
-        <div className="input-group mb-3">
-            <span className="input-group-text" id="basic-addon1">Tên cầu thủ: </span>
-            <input ref={inputRefName} type="text" className="form-control" placeholder="Nhập tên cầu thủ"
-                   aria-label="Username"
-                   aria-describedby="basic-addon1"/>
-        </div>
+            <div className="row justify-content-center">
+                <div className="col-12 col-lg-9">
+                    <div className="card shadow-sm rounded-3">
 
-        <div className="input-group mb-3">
-            <span className="input-group-text" id="basic-addon1">Ngày sinh cầu thủ: </span>
-            <input ref={inputRefDob} type="date" className="form-control" aria-label="Username"
-                   aria-describedby="basic-addon1"/>
-        </div>
+                        <div className="card-body pb-4">
 
-        <div className="input-group mb-3">
-            <span className="input-group-text" id="basic-addon1">Giá trị chuyển nhượng: </span>
-            <input ref={inputRefValue} type="text" className="form-control"
-                   placeholder="Nhập ngày giá trị chuyển nhượng"
-                   aria-label="Username"
-                   aria-describedby="basic-addon1"/>
-        </div>
+                            <h3 className="fw-bold mb-1 text-primary">
+                                Quản lý cầu thủ
+                            </h3>
+                            <p className="text-muted mb-3">
+                                Nhập thông tin để thêm cầu thủ vào danh sách
+                            </p>
 
-        <div className="input-group mb-3">
-            <span className="input-group-text" id="basic-addon1">Vị trí: </span>
-            <input ref={inputRefPosition} type="text" className="form-control" placeholder="Nhập vị trí"
-                   aria-label="Username"
-                   aria-describedby="basic-addon1"/>
-        </div>
-        <button className={'btn btn-primary rounded-3'} onClick={handleAddPlayer} type={'button'}>Thêm</button>
-        <PlayerListComponent playerList={playerList} setDeleteFlag={handleReloadAfterDeletePlayer}
-                             searchPlayerList={handleSearchPlayerList}/>
+                            <hr className="my-3 opacity-25" />
 
-    </div>)
-}
+                            <h5 className="fw-semibold mb-3">Thông tin cầu thủ</h5>
+
+                            <div className="row g-3">
+                                <div className="col-12 col-md-3">
+                                    <input ref={inputRefId} className="form-control form-control-sm" placeholder="ID" />
+                                </div>
+
+                                <div className="col-12 col-md-4">
+                                    <input ref={inputRefCode} className="form-control form-control-sm" placeholder="Mã cầu thủ" />
+                                </div>
+
+                                <div className="col-12 col-md-5">
+                                    <input ref={inputRefName} className="form-control" placeholder="Tên cầu thủ" />
+                                </div>
+
+                                <div className="col-6 col-md-4">
+                                    <input ref={inputRefDob} type="date" className="form-control form-control-sm" />
+                                </div>
+
+                                <div className="col-6 col-md-4">
+                                    <input ref={inputRefPosition} className="form-control form-control-sm" placeholder="Vị trí" />
+                                </div>
+
+                                <div className="col-12 col-md-4">
+                                    <div className="input-group input-group-sm">
+                                        <input ref={inputRefValue} className="form-control" placeholder="Giá trị (số)" />
+                                        <span className="input-group-text">VND</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="mt-4">
+                                <button className="btn btn-success px-4" onClick={handleAddPlayer}>
+                                    Thêm cầu thủ
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div className="mt-4">
+                        <PlayerListComponent
+                            playerList={playerList}
+                            setDeleteFlag={handleReloadAfterDeletePlayer}
+                            searchPlayerList={handleSearchPlayerList}
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default MainComponent;
