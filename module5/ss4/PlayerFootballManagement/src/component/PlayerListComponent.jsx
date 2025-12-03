@@ -29,7 +29,6 @@ const PlayerListComponent = ({playerList = [], setDeleteFlag, searchPlayerList})
 
     return (
         <div>
-            {/* Header */}
             <div
                 className="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between mb-3 gap-3">
                 <div>
@@ -104,7 +103,6 @@ const PlayerListComponent = ({playerList = [], setDeleteFlag, searchPlayerList})
                 </div>
             </div>
 
-            {/* Modals */}
             {showDetailModal && (
                 <DetailComponent
                     showDetailModal={showDetailModal}
