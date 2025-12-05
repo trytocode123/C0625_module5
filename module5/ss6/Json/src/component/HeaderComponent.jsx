@@ -1,5 +1,5 @@
 import {Link, useNavigate} from "react-router-dom";
-import {useRef, useState} from "react";
+import {useRef} from "react";
 
 const HeaderComponent = () => {
 
@@ -7,13 +7,11 @@ const HeaderComponent = () => {
     const navigate = useNavigate();
     const handleSearch = () => {
         const value = refSearch.current.value.trim();
-
         if (value === "") {
             navigate("/players");
         } else {
-            navigate(`/players/${encodeURIComponent(value)}`);
+            navigate(`/players/${(value)}`);
         }
-
     }
     return (
         <>
