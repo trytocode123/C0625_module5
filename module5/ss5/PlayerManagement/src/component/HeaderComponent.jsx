@@ -1,14 +1,17 @@
-import {Link, useNavigate} from "react-router";
-import {useRef} from "react";
+import {Link, useNavigate} from "react-router-dom";
+import {useRef, useState} from "react";
 
 const HeaderComponent = () => {
+
     const refSearch = useRef(null);
     const navigate = useNavigate();
     const handleSearch = () => {
-        if (refSearch.current.value === "") {
-            navigate("/players/:searchName")
+        const value = refSearch.current.value.trim();
+
+        if (value === "") {
+            navigate("/players");   // trả về danh sách mặc định
         } else {
-            navigate(`/players/${refSearch.current.value}`)
+            navigate(`/players/${encodeURIComponent(value)}`);
         }
 
     }
@@ -28,7 +31,7 @@ const HeaderComponent = () => {
                                 <Link className="nav-link active" aria-current="page" to={"/home"}>Home</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={"/players/:searchName"}>List</Link>
+                                <Link className="nav-link" to={"/players"}>List</Link>
                             </li>
 
                             <li className="nav-item">
@@ -43,7 +46,7 @@ const HeaderComponent = () => {
                             <input ref={refSearch} className="form-control me-2" type="search" placeholder="Search"
                                    aria-label="Search"/>
                             <button onClick={handleSearch} className="btn btn-outline-success"
-                                    type="submit">Search
+                                    type="button">Search
                             </button>
                         </div>
                     </div>

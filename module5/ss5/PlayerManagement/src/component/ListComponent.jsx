@@ -17,14 +17,14 @@ const ListComponent = () => {
     }
     const {searchName} = useParams();
     useEffect(() => {
-        setPlayerList(getAll());
-    }, [deleteFlag]);
-
-    useEffect(() => {
-        if (searchByName(searchName) !== null) {
-            setPlayerList(searchByName(searchName));
+        if (searchName && searchName.trim() !== "") {
+            setPlayerList(searchByName(decodeURIComponent(searchName)));
+        } else {
+            setPlayerList(getAll());
         }
-    }, [searchName])
+
+    }, [deleteFlag, searchName]);
+
     const handleToggleModal = (playerDelete) => {
         setShowModal(prevState => !prevState);
         setPlayerDelete(playerDelete);

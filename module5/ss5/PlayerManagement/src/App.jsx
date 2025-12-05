@@ -13,7 +13,7 @@ function App() {
             <HeaderComponent/>
             <Routes>
                 <Route path={"/home"} element={<HomeComponent/>}/>
-                <Route path={"/players/:searchName"} element={<ListComponent/>}/>
+                <Route path={"/players/:searchName?"} element={<ListComponent/>}/>
                 <Route path={"/players/add"} element={<AddComponent/>}/>
                 <Route path={"/players/detail/:id"} element={<DetailComponent/>}/>
             </Routes>
