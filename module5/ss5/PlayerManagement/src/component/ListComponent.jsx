@@ -22,7 +22,6 @@ const ListComponent = () => {
         } else {
             setPlayerList(getAll());
         }
-
     }, [deleteFlag, searchName]);
 
     const handleToggleModal = (playerDelete) => {
