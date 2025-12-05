@@ -1,0 +1,46 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "maCauThu": "PL001",
+      "ten": "Kevin De Bruyne",
+      "ngaySinh": "1991-06-28",
+      "gia": 120000000
+    },
+    {
+      "id": 2,
+      "maCauThu": "PL002",
+      "ten": "Erling Haaland",
+      "ngaySinh": "2000-07-21",
+      "gia": 180000000
+    },
+    {
+      "id": 3,
+      "maCauThu": "PL003",
+      "ten": "Lionel Messi",
+      "ngaySinh": "1987-06-24",
+      "gia": 35000000
+    },
+    {
+      "id": 4,
+      "maCauThu": "PL004",
+      "ten": "Cristiano Ronaldo",
+      "ngaySinh": "1985-02-05",
+      "gia": 15000000
+    },
+    {
+      "id": 5,
+      "maCauThu": "PL005",
+      "ten": "Kylian Em pê",
+      "ngaySinh": "1998-12-20",
+      "gia": 190000000
+    },
+    {
+      "maCauThu": "PL876",
+      "ten": "Nguyễn Đăng Thiên An",
+      "ngaySinh": "2002-12-21",
+      "gia": 123123123123,
+      "id": 12
+    }
+  ]
+}

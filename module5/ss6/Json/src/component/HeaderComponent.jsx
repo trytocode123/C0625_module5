@@ -35,9 +35,6 @@ const HeaderComponent = () => {
                             </li>
 
                             <li className="nav-item">
-                                <Link className="nav-link" to={"/players/add"}>Add</Link>
-                            </li>
-                            <li className="nav-item">
                                 <a className="nav-link disabled" href="#" tabIndex="-1"
                                    aria-disabled="true">Disabled</a>
                             </li>
