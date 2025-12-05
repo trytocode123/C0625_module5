@@ -47,7 +47,7 @@ const AddComponent = () => {
                     <div className="mb-3">
                         <label className="form-label">ID</label>
                         <Field
-                            type="number"
+                            type="text"
                             name={"id"}
                             className="form-control"
                         />

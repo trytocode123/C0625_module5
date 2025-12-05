@@ -54,14 +54,13 @@ export function deletePlayer(id) {
 }
 
 export function findById(id) {
-    if (id == null) return null;
-    const idToFind = Number(id);
-    if (Number.isNaN(idToFind)) return null;
+    // if (id == null) return null;
+    // const idToFind = Number(id);
+    // if (Number.isNaN(idToFind)) return null;
 
-    const found = players.find(p => p.id === idToFind);
+    // const found = players.find(p => p.id === idToFind);
+    const found = players.find(p => p.id == id);
     return found ?? null;
-
-
 }
 
 export function edit(playerEdit) {

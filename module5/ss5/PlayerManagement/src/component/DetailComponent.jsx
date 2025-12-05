@@ -5,7 +5,7 @@ import {Button} from "react-bootstrap";
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {edit, findById} from "../service/PlayerService.js";
-import {useNavigate} from "react-router";
+import {Link, useNavigate} from "react-router";
 import {toast} from "react-toastify";
 
 const DetailComponent = () => {
@@ -74,7 +74,7 @@ const DetailComponent = () => {
                         </label>
                         <Field type="text" name="gia"/>
                     </div>
-                    <Button>Đóng</Button>
+                    <Link className={'btn btn-secondary'} to={"/players"}>Đóng</Link>
                     <Button type={"submit"}>Chỉnh sửa</Button>
                 </Form>
             </Formik>
