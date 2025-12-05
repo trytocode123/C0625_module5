@@ -23,7 +23,7 @@ const AddComponent = () => {
             theme: "colored",
             autoClose: 5000
         })
-        // navigate("/players/:search");
+        navigate("/players");
     }
     const validate = Yup.object({
         id: Yup.number().typeError("Yêu cầu nhập số")

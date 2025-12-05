@@ -27,7 +27,7 @@ const DetailComponent = () => {
             detailFind = findById(id);
             setDetail(detailFind);
         }
-    }, [id]);
+    }, []);
 
 
     const handleEdit = (values) => {
@@ -38,7 +38,7 @@ const DetailComponent = () => {
             closeOnClick: true,
             position: "top-right"
         })
-        navigate("/players/:searchName");
+        navigate("/players");
     }
 
     return (
