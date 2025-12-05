@@ -81,7 +81,6 @@ const PlayerListComponent = ({playerList = [], setDeleteFlag, searchPlayerList})
                                             <button
                                                 onClick={() => handleToggleModal(player)}
                                                 className="btn btn-sm btn-outline-danger"
-                                                title="Xóa"
                                             >
                                                 Xóa
                                             </button>
@@ -89,7 +88,6 @@ const PlayerListComponent = ({playerList = [], setDeleteFlag, searchPlayerList})
                                             <button
                                                 onClick={() => handleDetail(player)}
                                                 className="btn btn-sm btn-outline-info"
-                                                title="Chi tiết"
                                             >
                                                 Chi tiết
                                             </button>
