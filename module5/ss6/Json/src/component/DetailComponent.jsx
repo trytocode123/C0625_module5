@@ -81,7 +81,6 @@ const DetailComponent = () => {
     return (
         <div className="container my-4 my-md-5" style={{maxWidth: 900}}>
             <div className="card border-0 shadow-lg rounded-3">
-                {/* HEADER */}
                 <div
                     className="card-header text-white d-flex justify-content-between align-items-center border-0"
                     style={{
@@ -102,9 +101,7 @@ const DetailComponent = () => {
                     </Link>
                 </div>
 
-                {/* BODY */}
                 <div className="card-body p-4 p-md-5">
-                    {/* BLOCK THÔNG TIN TÓM TẮT */}
                     <div
                         className="d-flex flex-column flex-md-row align-items-center align-items-md-start mb-4 p-3 p-md-4 rounded-3 bg-light border"
                     >
@@ -163,7 +160,6 @@ const DetailComponent = () => {
                         </div>
                     </div>
 
-                    {/* FORM */}
                     <Formik
                         initialValues={detail}
                         onSubmit={handleEdit}
@@ -176,7 +172,6 @@ const DetailComponent = () => {
                                 Thông tin chi tiết
                             </h6>
 
-                            {/* Tên cầu thủ */}
                             <div className="mb-3 mb-md-4">
                                 <label className="form-label fw-semibold">
                                     Tên cầu thủ
@@ -192,7 +187,6 @@ const DetailComponent = () => {
                                 </div>
                             </div>
 
-                            {/* Mã cầu thủ */}
                             <div className="mb-3 mb-md-4">
                                 <label className="form-label fw-semibold">
                                     Mã cầu thủ
@@ -208,7 +202,6 @@ const DetailComponent = () => {
                                 </div>
                             </div>
 
-                            {/* Ngày sinh */}
                             <div className="mb-3 mb-md-4">
                                 <label className="form-label fw-semibold">
                                     Ngày sinh
@@ -220,7 +213,6 @@ const DetailComponent = () => {
                                 />
                             </div>
 
-                            {/* Giá trị */}
                             <div className="mb-3 mb-md-4">
                                 <label className="form-label fw-semibold">
                                     Giá trị (VND)
@@ -236,7 +228,6 @@ const DetailComponent = () => {
                                 </div>
                             </div>
 
-                            {/* Vị trí */}
                             <div className="mb-4">
                                 <label className="form-label fw-semibold">
                                     Vị trí trên sân
@@ -263,7 +254,6 @@ const DetailComponent = () => {
                                 </div>
                             </div>
 
-                            {/* BUTTON */}
                             <div className="d-flex justify-content-between align-items-center">
                                 <Button
                                     className="px-4"

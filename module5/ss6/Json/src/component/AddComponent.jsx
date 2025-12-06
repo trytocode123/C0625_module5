@@ -74,7 +74,6 @@ const AddComponent = () => {
                     <div className="col-12 col-md-10 col-lg-8 col-xl-7">
                         <div className="card shadow-sm border-0 rounded-4 overflow-hidden">
                             <div className="card-body p-4 p-md-5">
-                                {/* Header */}
                                 <div className="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
                                     <div>
                                         <h4 className="fw-semibold mb-1">Thêm cầu thủ mới</h4>
@@ -99,7 +98,6 @@ const AddComponent = () => {
                                     {({values, isSubmitting}) => (
                                         <Form>
                                             <div className="row g-4">
-                                                {/* Cột avatar & preview */}
                                                 <div className="col-12 col-md-4 d-flex flex-column align-items-center">
                                                     <div
                                                         className="rounded-circle d-flex justify-content-center align-items-center mb-3 border"
@@ -124,7 +122,6 @@ const AddComponent = () => {
                                                     </small>
                                                 </div>
 
-                                                {/* Cột form nhập liệu */}
                                                 <div className="col-12 col-md-8">
                                                     <div className="row g-3">
                                                         <div className="col-12">
@@ -197,7 +194,6 @@ const AddComponent = () => {
                                                             />
                                                         </div>
 
-                                                        {/* Select vị trí */}
                                                         <div className="col-12 col-sm-6">
                                                             <label className="form-label small fw-semibold">
                                                                 Vị trí thi đấu <span className="text-danger">*</span>
@@ -224,7 +220,6 @@ const AddComponent = () => {
                                                             />
                                                         </div>
 
-                                                        {/* Nút submit */}
                                                         <div className="col-12 mt-3">
                                                             <div className="d-flex gap-2 justify-content-end">
                                                                 <Button
@@ -245,7 +240,6 @@ const AddComponent = () => {
                                 </Formik>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
