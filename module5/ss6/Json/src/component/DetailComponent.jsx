@@ -6,6 +6,7 @@ import {useParams, useNavigate, Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {findById, edit} from "../service/PlayerService.js";
 import {toast} from "react-toastify";
+import {getAll} from "../service/PositionService.js";
 
 const DetailComponent = () => {
     const {id} = useParams();
@@ -16,21 +17,39 @@ const DetailComponent = () => {
         maCauThu: "",
         ten: "",
         ngaySinh: "",
-        gia: ""
+        gia: "",
+        position: ""
     });
+
+    const [positions, setPositions] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             const detailPlayer = await findById(id);
             if (detailPlayer) {
-                setDetail(detailPlayer);
+                const detailPlayerFormat = {
+                    ...detailPlayer,
+                    position: JSON.stringify(detailPlayer.position)
+                };
+                setDetail(detailPlayerFormat);
             }
         };
+
+        const fetchDataPosition = async () => {
+            const position = await getAll();
+            setPositions(position);
+        };
+
+        fetchDataPosition();
         fetchData();
     }, [id]);
 
     const handleEdit = async (values) => {
-        const isEditSuccess = await edit(values);
+        const playerEdit = {
+            ...values,
+            position: JSON.parse(values.position)
+        };
+        const isEditSuccess = await edit(playerEdit);
         if (isEditSuccess) {
             toast.success("Chỉnh sửa thành công!", {
                 theme: "colored",
@@ -47,69 +66,217 @@ const DetailComponent = () => {
                 position: "top-right"
             });
         }
-
     };
 
-    return (
-        <div className="container mt-4">
+    const initials = (detail.ten || "")
+        .trim()
+        .split(/\s+/)
+        .map(w => w[0])
+        .slice(0, 2)
+        .join("")
+        .toUpperCase();
 
-            <div className="card shadow-sm">
-                <div className="card-header bg-primary text-white">
-                    <h3 className="mb-0">Chi tiết cầu thủ</h3>
+    const formattedPrice = (Number(detail.gia) || 0).toLocaleString("vi-VN");
+
+    return (
+        <div className="container my-4 my-md-5" style={{maxWidth: 900}}>
+            <div className="card border-0 shadow-lg rounded-3">
+                {/* HEADER */}
+                <div
+                    className="card-header text-white d-flex justify-content-between align-items-center border-0"
+                    style={{
+                        background: "linear-gradient(135deg, #1565c0, #1e88e5)"
+                    }}
+                >
+                    <div>
+                        <h3 className="mb-0 fw-semibold">Chi tiết cầu thủ</h3>
+                        <small className="text-light-50">
+                            Trang thông tin chi tiết & chỉnh sửa
+                        </small>
+                    </div>
+                    <Link
+                        to="/players"
+                        className="btn btn-sm btn-outline-light"
+                    >
+                        ← Quay lại danh sách
+                    </Link>
                 </div>
 
-                <div className="card-body">
+                {/* BODY */}
+                <div className="card-body p-4 p-md-5">
+                    {/* BLOCK THÔNG TIN TÓM TẮT */}
+                    <div
+                        className="d-flex flex-column flex-md-row align-items-center align-items-md-start mb-4 p-3 p-md-4 rounded-3 bg-light border"
+                    >
+                        <div className="me-md-3 mb-3 mb-md-0 text-center">
+                            <div
+                                className="rounded-circle d-flex align-items-center justify-content-center mx-auto shadow-sm bg-primary bg-opacity-10 text-primary"
+                                style={{
+                                    width: 80,
+                                    height: 80,
+                                    fontWeight: 700,
+                                    fontSize: "1.6rem"
+                                }}
+                            >
+                                {initials || "CT"}
+                            </div>
+                        </div>
 
+                        <div className="flex-grow-1 w-100">
+                            <div className="d-flex flex-column flex-md-row justify-content-between gap-3">
+                                <div>
+                                    <div className="fw-bold fs-4 mb-1 text-dark">
+                                        {detail.ten || "Chưa có tên"}
+                                    </div>
+                                    <div className="d-flex flex-wrap align-items-center gap-2">
+                                        <span className="badge bg-light text-dark border">
+                                            Mã cầu thủ:&nbsp;
+                                            <span className="fw-semibold">
+                                                {detail.maCauThu || "N/A"}
+                                            </span>
+                                        </span>
+                                        {detail.ngaySinh && (
+                                            <span className="badge bg-light text-muted border">
+                                                <span className="small me-1">
+                                                    Ngày sinh:
+                                                </span>
+                                                <span className="fw-semibold text-info">
+                                                    {detail.ngaySinh}
+                                                </span>
+                                            </span>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <div className="text-md-end">
+                                    <div className="text-muted small mb-1">
+                                        Giá trị chuyển nhượng
+                                    </div>
+                                    <div
+                                        className="fw-bold fs-4"
+                                        style={{color: "#d32f2f"}}
+                                    >
+                                        {formattedPrice} ₫
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* FORM */}
                     <Formik
                         initialValues={detail}
                         onSubmit={handleEdit}
                         enableReinitialize={true}
                     >
                         <Form>
-
                             <Field type="hidden" name="id"/>
 
-                            {/* Tên */}
-                            <div className="input-group mb-3">
-                                <label className="input-group-text w-25">Tên</label>
-                                <Field className="form-control" type="text" name="ten"/>
+                            <h6 className="text-uppercase text-muted mb-3">
+                                Thông tin chi tiết
+                            </h6>
+
+                            {/* Tên cầu thủ */}
+                            <div className="mb-3 mb-md-4">
+                                <label className="form-label fw-semibold">
+                                    Tên cầu thủ
+                                </label>
+                                <Field
+                                    className="form-control form-control-sm"
+                                    type="text"
+                                    name="ten"
+                                    placeholder="Nhập tên cầu thủ"
+                                />
+                                <div className="form-text">
+                                    Đây là thông tin hiển thị chính trong danh sách.
+                                </div>
                             </div>
 
                             {/* Mã cầu thủ */}
-                            <div className="input-group mb-3">
-                                <label className="input-group-text w-25">Mã cầu thủ</label>
-                                <Field className="form-control" type="text" name="maCauThu"/>
+                            <div className="mb-3 mb-md-4">
+                                <label className="form-label fw-semibold">
+                                    Mã cầu thủ
+                                </label>
+                                <Field
+                                    className="form-control form-control-sm"
+                                    type="text"
+                                    name="maCauThu"
+                                    placeholder="Ví dụ: PL004"
+                                />
+                                <div className="form-text">
+                                    Mã định danh duy nhất cho mỗi cầu thủ.
+                                </div>
                             </div>
 
                             {/* Ngày sinh */}
-                            <div className="input-group mb-3">
-                                <label className="input-group-text w-25">Ngày sinh</label>
-                                <Field className="form-control" type="date" name="ngaySinh"/>
+                            <div className="mb-3 mb-md-4">
+                                <label className="form-label fw-semibold">
+                                    Ngày sinh
+                                </label>
+                                <Field
+                                    className="form-control form-control-sm"
+                                    type="date"
+                                    name="ngaySinh"
+                                />
                             </div>
 
                             {/* Giá trị */}
-                            <div className="input-group mb-4">
-                                <label className="input-group-text w-25">Giá trị</label>
-                                <Field className="form-control" type="text" name="gia"/>
+                            <div className="mb-3 mb-md-4">
+                                <label className="form-label fw-semibold">
+                                    Giá trị (VND)
+                                </label>
+                                <Field
+                                    className="form-control form-control-sm"
+                                    type="text"
+                                    name="gia"
+                                    placeholder="Nhập giá trị cầu thủ"
+                                />
+                                <div className="form-text">
+                                    Số tiền theo đơn vị Việt Nam đồng.
+                                </div>
                             </div>
 
-                            {/* Buttons */}
-                            <div className="d-flex justify-content-between">
-                                <Link className="btn btn-secondary" to="/players">
-                                    Đóng
-                                </Link>
+                            {/* Vị trí */}
+                            <div className="mb-4">
+                                <label className="form-label fw-semibold">
+                                    Vị trí trên sân
+                                </label>
+                                <Field
+                                    as="select"
+                                    name="position"
+                                    className="form-select form-select-sm"
+                                >
+                                    <option value="">
+                                        ---- Chọn vị trí ----
+                                    </option>
+                                    {positions.map(position => (
+                                        <option
+                                            key={position.id}
+                                            value={JSON.stringify(position)}
+                                        >
+                                            {position.name}
+                                        </option>
+                                    ))}
+                                </Field>
+                                <div className="form-text">
+                                    Chọn vị trí thi đấu chính của cầu thủ.
+                                </div>
+                            </div>
 
-                                <Button className="btn btn-primary" type="submit">
-                                    Chỉnh sửa
+                            {/* BUTTON */}
+                            <div className="d-flex justify-content-between align-items-center">
+                                <Button
+                                    className="px-4"
+                                    variant="primary"
+                                    type="submit"
+                                >
+                                    Lưu chỉnh sửa
                                 </Button>
                             </div>
-
                         </Form>
                     </Formik>
-
                 </div>
             </div>
-
         </div>
     );
 };

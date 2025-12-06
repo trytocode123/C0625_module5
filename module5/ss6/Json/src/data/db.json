@@ -1,46 +1,121 @@
 {
+  "positions": [
+    {
+      "id": "1",
+      "name": "Tiền đạo"
+    },
+    {
+      "id": "2",
+      "name": "Hậu vệ"
+    },
+    {
+      "id": "3",
+      "name": "Thủ môn"
+    },
+    {
+      "id": "4",
+      "name": "Tiền vệ"
+    }
+  ],
   "players": [
     {
-      "id": 1,
+      "id": "1",
       "maCauThu": "PL001",
-      "ten": "Kevin De Bruyne",
-      "ngaySinh": "1991-06-28",
-      "gia": 120000000
+      "ten": "Lionel",
+      "ngaySinh": "1987-06-24",
+      "gia": 10000000,
+      "position": {
+        "id": "3",
+        "name": "Thủ môn"
+      }
     },
     {
-      "id": 2,
+      "id": "2",
       "maCauThu": "PL002",
+      "ten": "Kylian Mbappe",
+      "ngaySinh": "1998-12-20",
+      "gia": 18000000,
+      "position": {
+        "id": "1",
+        "name": "Tiền đạo"
+      }
+    },
+    {
+      "id": "3",
+      "maCauThu": "PL003",
       "ten": "Erling Haaland",
       "ngaySinh": "2000-07-21",
-      "gia": 180000000
+      "gia": 20000000,
+      "position": {
+        "id": "1",
+        "name": "Tiền đạo"
+      }
     },
     {
-      "id": 3,
-      "maCauThu": "PL003",
-      "ten": "Lionel Messi",
-      "ngaySinh": "1987-06-24",
-      "gia": 35000000
-    },
-    {
-      "id": 4,
+      "id": "4",
       "maCauThu": "PL004",
       "ten": "Cristiano Ronaldo",
       "ngaySinh": "1985-02-05",
-      "gia": 15000000
+      "gia": 15000000,
+      "position": {
+        "id": "1",
+        "name": "Tiền đạo"
+      }
     },
     {
-      "id": 5,
+      "id": "5",
       "maCauThu": "PL005",
-      "ten": "Kylian Em pê",
-      "ngaySinh": "1998-12-20",
-      "gia": 190000000
+      "ten": "Virgil van Dijk",
+      "ngaySinh": "1991-07-08",
+      "gia": 8000000,
+      "position": {
+        "id": "2",
+        "name": "Hậu vệ"
+      }
     },
     {
-      "maCauThu": "PL876",
-      "ten": "Nguyễn Đăng Thiên An",
+      "id": "6",
+      "maCauThu": "PL006",
+      "ten": "Marc-André ter Stegen",
+      "ngaySinh": "1992-04-30",
+      "gia": 12000000,
+      "position": {
+        "id": "3",
+        "name": "Thủ môn"
+      }
+    },
+    {
+      "id": "7",
+      "maCauThu": "PL007",
+      "ten": "Kevin De",
+      "ngaySinh": "1991-06-28",
+      "position": {
+        "id": "4",
+        "name": "Tiền vệ"
+      },
+      "gia": "3123123231232312"
+    },
+    {
+      "id": "6017",
+      "maCauThu": "PL009",
+      "ten": "Mân đàn",
       "ngaySinh": "2002-12-21",
-      "gia": 123123123123,
-      "id": 12
+      "gia": 12312323223123,
+      "position": {
+        "id": "1",
+        "name": "Tiền đạo"
+      }
+    },
+    {
+      "id": "e7f8",
+      "maCauThu": "PL008",
+      "ten": "Mân đàn",
+      "ngaySinh": "2002-12-21",
+      "gia": 12312323223123,
+      "position": {
+        "id": "3",
+        "name": "Thủ môn"
+      }
     }
   ]
 }

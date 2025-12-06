@@ -15,7 +15,7 @@ function App() {
             <Routes>
                 <Route path={"/home"} element={<HomeComponent/>}></Route>
                 <Route path={"/players/:searchName?"} element={<ListComponent/>}/>
-                <Route path={"/players/detail/:id?"} element={<DetailComponent/>}/>
+                <Route path={"/players/detail/:id"} element={<DetailComponent/>}/>
                 <Route path={"/players/add"} element={<AddComponent/>}/>
             </Routes>
             <ToastContainer/>
