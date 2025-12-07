@@ -36,7 +36,6 @@ const ListComponent = () => {
         setPlayerDelete(player || {});
     };
 
-    // Chỉ xử lý màu theo tên vị trí
     const getPositionInfo = (player) => {
         const name = player?.position?.name || "Chưa có";
 
@@ -156,7 +155,6 @@ const ListComponent = () => {
                 </div>
             </div>
 
-            {/* Desktop view */}
             <div className="d-none d-md-block">
                 <div className="table-responsive">
                     <table className="table align-middle table-striped">

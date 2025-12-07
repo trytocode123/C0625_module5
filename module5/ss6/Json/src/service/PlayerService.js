@@ -34,7 +34,8 @@ export async function findById(id) {
 
 export async function edit(playerEdit) {
     try {
-        const res = await axios.patch(`${URL}/players/${playerEdit.id}`, playerEdit);
+        const { id, ...rest } = playerEdit;
+        const res = await axios.patch(`${URL}/players/${id}`, rest);
         return res.status === 200;
     } catch (e) {
         console.log(e.message);

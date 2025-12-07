@@ -13,11 +13,11 @@ const DetailComponent = () => {
     const navigate = useNavigate();
 
     const [detail, setDetail] = useState({
-        id: "",
+        id: 0,
         maCauThu: "",
         ten: "",
         ngaySinh: "",
-        gia: "",
+        gia: 0,
         position: ""
     });
 
@@ -31,6 +31,7 @@ const DetailComponent = () => {
                     ...detailPlayer,
                     position: JSON.stringify(detailPlayer.position)
                 };
+                console.log(detailPlayerFormat);
                 setDetail(detailPlayerFormat);
             }
         };
@@ -42,12 +43,13 @@ const DetailComponent = () => {
 
         fetchDataPosition();
         fetchData();
-    }, [id]);
+    }, []);
 
     const handleEdit = async (values) => {
         const playerEdit = {
             ...values,
-            position: JSON.parse(values.position)
+            position: JSON.parse(values.position),
+            id: Number(values.id)
         };
         const isEditSuccess = await edit(playerEdit);
         if (isEditSuccess) {

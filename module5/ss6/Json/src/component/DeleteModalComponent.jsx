@@ -7,7 +7,6 @@ const DeleteModalComponent = ({show, handleToggleModal, playerDelete, reloadAfte
     const handleDeletePlayer = () => {
         const fetchData = async () => {
             const isDeleteSucceed = await deletePlayer(playerDelete.id);
-            console.log(playerDelete.id)
             if (isDeleteSucceed) {
                 toast.success("Xóa thành công!", {
                     position: "top-right",

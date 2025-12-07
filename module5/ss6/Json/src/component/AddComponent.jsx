@@ -24,7 +24,7 @@ const AddComponent = () => {
     const validationSchema = Yup.object({
         maCauThu: Yup.string().matches(/^PL([0-9]){3}$/, "Sai định dạng (VD: PL001)")
             .required("Yêu cầu nhập mã cầu thủ"),
-        ten: Yup.string().required("Yêu cầu nhập tên"),
+        ten: Yup.string().required("Yêu cầu nhập tên").matches(/^([A-Z][a-z]+)(\s[A-z][a-z])*$/, "Tên không đúng định dạng"),
         ngaySinh: Yup.date().required("Yêu cầu nhập ngày sinh"),
         gia: Yup.number().required("Yêu cầu nhập giá").min(2000000, "Giá phải trên 2.000.000"),
         position: Yup.string().required("Yêu cầu chọn vị trí")
@@ -34,11 +34,12 @@ const AddComponent = () => {
         const newPlayer = {
             ...values,
             gia: Number(values.gia),
-            position: JSON.parse(values.position)
+            position: {...JSON.parse(values.position), id: Number(JSON.parse(values.position).id)}
         };
 
         const fetchData = async () => {
             const isAddPlayer = await add(newPlayer);
+            console.log(newPlayer)
             if (isAddPlayer) {
                 toast.success("Thêm mới thành công!", {theme: "colored", autoClose: 3000});
                 navigate("/players");
@@ -74,7 +75,8 @@ const AddComponent = () => {
                     <div className="col-12 col-md-10 col-lg-8 col-xl-7">
                         <div className="card shadow-sm border-0 rounded-4 overflow-hidden">
                             <div className="card-body p-4 p-md-5">
-                                <div className="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
+                                <div
+                                    className="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3">
                                     <div>
                                         <h4 className="fw-semibold mb-1">Thêm cầu thủ mới</h4>
                                         <p className="text-muted small mb-0">
