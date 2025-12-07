@@ -31,7 +31,6 @@ const DetailComponent = () => {
                     ...detailPlayer,
                     position: JSON.stringify(detailPlayer.position)
                 };
-                console.log(detailPlayerFormat);
                 setDetail(detailPlayerFormat);
             }
         };
@@ -48,8 +47,7 @@ const DetailComponent = () => {
     const handleEdit = async (values) => {
         const playerEdit = {
             ...values,
-            position: JSON.parse(values.position),
-            id: Number(values.id)
+            position: JSON.parse(values.position)
         };
         const isEditSuccess = await edit(playerEdit);
         if (isEditSuccess) {
