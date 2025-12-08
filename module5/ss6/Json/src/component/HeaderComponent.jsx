@@ -2,10 +2,18 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import {Link, useNavigate} from "react-router-dom";
 import {useRef} from "react";
+import {useDispatch, useSelector} from "react-redux";
+import {logout} from "../redux/action.js";
 
 const HeaderComponent = () => {
     const refSearch = useRef(null);
     const navigate = useNavigate();
+    const auth = useSelector(state => state.auth);
+    const dispatch = useDispatch();
+
+    const handleLogout = () => {
+        dispatch(logout());
+    }
 
     const handleSearch = () => {
         const value = refSearch.current.value.trim();
@@ -62,6 +70,15 @@ const HeaderComponent = () => {
                                 <Link className="nav-link active" aria-current="page" to="/players">
                                     Danh sách cầu thủ
                                 </Link>
+                            </li>
+                            {!auth.account && <li className="nav-item">
+                                <Link className="nav-link" to={'/login'}>Login</Link>
+                            </li>}
+                            {auth.account&& <li className="nav-item">
+                                <button onClick={handleLogout} className="nav-link">Logout</button>
+                            </li>}
+                            <li className="nav-item">
+                                <span className="nav-link">{auth?.account?.username}</span>
                             </li>
                         </ul>
 

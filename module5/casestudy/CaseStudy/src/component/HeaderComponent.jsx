@@ -52,14 +52,16 @@ const HeaderComponent = () => {
                             </a>
                             <ul className="dropdown-menu">
                                 {serviceList.map((service, i) => (
-                                    <li key={i} onClick={() => {
-                                        handleSetPage(service.api)
-                                    }}><Link to={service.api}
-                                             className="dropdown-item">{service.title}</Link>
+                                    <li key={i}><Link to={service.api}
+                                                      className="dropdown-item">{service.title}</Link>
                                     </li>
                                 ))}
                             </ul>
                         </li>
+
+                        <Link to={"/customers"} className="nav-item nav-link fw-semibold" style={{cursor: "pointer"}}>
+                            Quản lý khách hàng
+                        </Link>
                     </ul>
 
                     <form className="d-flex me-3" role="search">

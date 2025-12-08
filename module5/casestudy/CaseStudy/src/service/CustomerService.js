@@ -2,9 +2,9 @@ import axios from "axios";
 
 const URL = import.meta.env.VITE_URL;
 
-export async function getVillaList() {
+export async function getCustomerList() {
     try {
-        const res = await axios.get(`${URL}/villas`);
+        const res = await axios.get(`${URL}/customers`);
         return res.data;
     } catch (error) {
         console.error(error.message);
@@ -12,10 +12,10 @@ export async function getVillaList() {
     return [];
 }
 
-export async function searchVillaByName(param) {
+export async function searchCustomerByName(param) {
     try {
         if (param) {
-            const res = await axios.get(`${URL}/villas`, {
+            const res = await axios.get(`${URL}/customers`, {
                 params: param
             });
             return res.data;
@@ -26,9 +26,9 @@ export async function searchVillaByName(param) {
     return [];
 }
 
-export async function findVillaById(id) {
+export async function findCustomerById(id) {
     try {
-        const res = await axios.get(`${URL}/villas/${id}`);
+        const res = await axios.get(`${URL}/customers/${id}`);
         return res.data
     } catch (error) {
         console.error(error);
@@ -36,9 +36,9 @@ export async function findVillaById(id) {
     return null;
 }
 
-export async function editVilla(villaEdit) {
+export async function editCustomer(customerEdit) {
     try {
-        const res = await axios.patch(`${URL}/villas/${villaEdit.id}`, villaEdit);
+        const res = await axios.patch(`${URL}/customers/${customerEdit.id}`, customerEdit);
         return res.status === 200;
     } catch (error) {
         console.error(error);
@@ -47,9 +47,9 @@ export async function editVilla(villaEdit) {
     return false;
 }
 
-export async function deleteVilla(id) {
+export async function deleteCustomer(id) {
     try {
-        const res = await axios.delete(`${URL}/villas/${id}`);
+        const res = await axios.delete(`${URL}/customers/${id}`);
         return res.status === 200;
     } catch (error) {
         console.error(error);
@@ -57,9 +57,9 @@ export async function deleteVilla(id) {
     return false;
 }
 
-export async function addVilla(villa) {
+export async function addCustomer(customer) {
     try {
-        const res = await axios.post(`${URL}/villas`, villa);
+        const res = await axios.post(`${URL}/customers`, customer);
         return res.status === 201;
     } catch (error) {
         console.error(error);

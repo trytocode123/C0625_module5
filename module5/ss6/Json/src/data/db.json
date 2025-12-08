@@ -1,4 +1,16 @@
 {
+  "users": [
+    {
+      "username": "chanhtv",
+      "password": "123",
+      "role": "teacher"
+    },
+    {
+      "username": "thanhvv",
+      "password": "123",
+      "role": "student"
+    }
+  ],
   "positions": [
     {
       "id": 1,

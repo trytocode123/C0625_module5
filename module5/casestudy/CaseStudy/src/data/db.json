@@ -1,5 +1,5 @@
 {
-  "department": [
+  "departments": [
     {
       "id": 1,
       "name": "Lễ tân"
@@ -144,18 +144,6 @@
       "floor": 2
     },
     {
-      "id": 2,
-      "name": "Villa Ocean View",
-      "area": 35,
-      "fee": 2500000,
-      "capacity": 8,
-      "type": "Daily",
-      "standard": "VIP",
-      "description": "View biển thoáng đãng, có hồ bơi riêng",
-      "arePool": 10,
-      "floor": 3
-    },
-    {
       "id": 3,
       "name": "Villa Luxury Garden",
       "area": 30,
@@ -187,7 +175,7 @@
       "capacity": 6,
       "type": "Daily",
       "standard": "Standard",
-      "description": "Phù hợp gia đình nhỏ, tiện ích đầy đủ",
+      "description": "Phù hợp gia đình nhỏ, tiện ích đầy ấp",
       "arePool": 4,
       "floor": 2
     },
@@ -202,6 +190,18 @@
       "description": "Gió núi mát lành, hồ bơi vô cực",
       "arePool": 15,
       "floor": 3
+    },
+    {
+      "id": 7,
+      "name": "Mới thêm ",
+      "area": 121,
+      "fee": 1212,
+      "capacity": 121,
+      "type": "Daily",
+      "standard": "Standard",
+      "description": "Mới thêm",
+      "arePool": 123123,
+      "floor": 123123
     }
   ],
   "houses": [
@@ -283,28 +283,6 @@
       "floor": 2
     },
     {
-      "id": 8,
-      "name": "House Ocean Breeze",
-      "area": 38,
-      "fee": 1900000,
-      "capacity": 7,
-      "type": "Monthly",
-      "standard": "Giường lớn, máy lạnh, ban công hướng biển",
-      "description": "Nhà gần biển, view tuyệt đẹp",
-      "floor": 3
-    },
-    {
-      "id": 9,
-      "name": "House Family Cozy",
-      "area": 27,
-      "fee": 1100000,
-      "capacity": 5,
-      "type": "Monthly",
-      "standard": "Giường đôi, sofa, tủ lạnh mini",
-      "description": "Nhà ấm cúng, thích hợp cho gia đình 4–5 người",
-      "floor": 2
-    },
-    {
       "id": 10,
       "name": "House Downtown Corner",
       "area": 33,
@@ -318,67 +296,19 @@
   ],
   "rooms": [
     {
-      "id": 1,
-      "name": "Room Cozy Studio",
-      "area": 18,
-      "fee": 500000,
-      "capacity": 2,
-      "type": "Daily",
-      "standard": "Standard",
-      "description": "Phòng studio nhỏ gọn, sạch sẽ, đầy đủ nội thất cơ bản",
-      "freeService": {
-        "id": 4,
-        "name": "Nuoc uong",
-        "unit": "Chai",
-        "price": 30000
-      }
-    },
-    {
       "id": 2,
       "name": "Room Premium Couple",
-      "area": 22,
+      "area": 20,
       "fee": 700000,
       "capacity": 3,
       "type": "Daily",
       "standard": "Premium",
-      "description": "Phòng dành cho cặp đôi, có ban công thoáng",
+      "description": "Phòng dành cho cặp đôi, có ban công thoáng mát\n\n",
       "freeService": {
-        "id": 4,
-        "name": "Nuoc uong",
-        "unit": "Chai",
-        "price": 30000
-      }
-    },
-    {
-      "id": 3,
-      "name": "Room Business Deluxe",
-      "area": 25,
-      "fee": 850000,
-      "capacity": 2,
-      "type": "Daily",
-      "standard": "Luxury",
-      "description": "Phòng cao cấp với bàn làm việc chuyên nghiệp",
-      "freeService": {
-        "id": 5,
-        "name": "Thue xe tham quan",
-        "unit": "Gio",
-        "price": 500000
-      }
-    },
-    {
-      "id": 4,
-      "name": "Room Garden View",
-      "area": 20,
-      "fee": 600000,
-      "capacity": 2,
-      "type": "Daily",
-      "standard": "Standard",
-      "description": "Phòng hướng vườn mát mẻ, nội thất gỗ nhẹ nhàng",
-      "freeService": {
-        "id": 5,
-        "name": "Thue xe tham quan",
-        "unit": "Gio",
-        "price": 500000
+        "id": 2,
+        "name": "Karaoke",
+        "unit": "Giờ",
+        "price": 200000
       }
     },
     {
@@ -392,7 +322,7 @@
       "description": "Phòng hai giường, không gian hiện đại và ấm cúng",
       "freeService": {
         "id": 4,
-        "name": "Nuoc uong",
+        "name": "Nước uống",
         "unit": "Chai",
         "price": 30000
       }
@@ -407,10 +337,10 @@
       "standard": "Standard",
       "description": "Phòng sáng sủa, gần biển, view thoáng",
       "freeService": {
-        "id": 5,
-        "name": "Thue xe tham quan",
-        "unit": "Gio",
-        "price": 500000
+        "id": 3,
+        "name": "Thức ăn",
+        "unit": "Phần",
+        "price": 150000
       }
     },
     {
@@ -421,28 +351,28 @@
       "capacity": 4,
       "type": "Daily",
       "standard": "Premium",
-      "description": "Phòng rộng phù hợp gia đình nhỏ, trang bị đủ tiện nghi",
-      "freeService": {
-        "id": 3,
-        "name": "Thuc an",
-        "unit": "Phan",
-        "price": 150000
-      }
-    },
-    {
-      "id": 8,
-      "name": "Room Sunset Deluxe",
-      "area": 26,
-      "fee": 950000,
-      "capacity": 3,
-      "type": "Daily",
-      "standard": "Luxury",
-      "description": "Phòng hướng hoàng hôn, nội thất cao cấp",
+      "description": "Phòng rộng phù hợp gia đình nhỏ, trang bị đủ tiện nghi, rất đẹp, rất chill",
       "freeService": {
         "id": 1,
         "name": "Massage",
         "unit": "Gio",
         "price": 300000
+      }
+    },
+    {
+      "id": 8,
+      "name": "Room Sunset Deluxe",
+      "area": 20,
+      "fee": 950000,
+      "capacity": 3,
+      "type": "Monthly",
+      "standard": "Luxury",
+      "description": "Phòng hướng hoàng hôn, nội thất cao cấp",
+      "freeService": {
+        "id": 5,
+        "name": "Thuê xe tham quan",
+        "unit": "Giờ",
+        "price": 500000
       }
     },
     {
@@ -455,43 +385,58 @@
       "standard": "Standard",
       "description": "Phòng nhỏ gọn phong cách tối giản, phù hợp người đi công tác",
       "freeService": {
-        "id": 2,
-        "name": "Karaoke",
-        "unit": "Gio",
-        "price": 200000
+        "id": 5,
+        "name": "Thuê xe tham quan",
+        "unit": "Giờ",
+        "price": 500000
       }
     },
     {
-      "id": 10,
-      "name": "Room Sky Loft",
-      "area": 30,
-      "fee": 1200000,
-      "capacity": 3,
+      "name": "Messi",
+      "area": "1212121",
+      "fee": "121212",
+      "capacity": "44",
       "type": "Daily",
-      "standard": "Luxury",
-      "description": "Phòng loft cao cấp, trần cao, cửa kính toàn cảnh",
+      "standard": "Standard",
+      "description": "Đẹp",
       "freeService": {
         "id": 5,
-        "name": "Thue xe tham quan",
-        "unit": "Gio",
+        "name": "Thuê xe tham quan",
+        "unit": "Giờ",
         "price": 500000
-      }
+      },
+      "id": 10
+    },
+    {
+      "name": "fghfgh",
+      "area": "12312312",
+      "fee": "0123123",
+      "capacity": "12121",
+      "type": "ghghgh",
+      "standard": "sfdsdfsfsd",
+      "description": "sdfsdfsd",
+      "freeService": {
+        "id": 2,
+        "name": "Karaoke",
+        "unit": "Giờ",
+        "price": 200000
+      },
+      "id": 11
     }
   ],
-  "customer": [
+  "customers": [
     {
       "id": 1,
       "name": "Nguyen Van An",
       "birthDay": "1990-03-12",
-      "gender": true,
+      "gender": false,
       "idCard": "012345678",
       "phone": "0905123456",
       "email": "an.nguyen@example.com",
-      "customerType": "Diamond",
       "address": "Da Nang",
       "type": {
-        "id": 2,
-        "name": "Platinium"
+        "id": 1,
+        "name": "Diamond"
       }
     },
     {
@@ -502,7 +447,6 @@
       "idCard": "123456789",
       "phone": "0932456789",
       "email": "bich.tran@example.com",
-      "customerType": "Platinum",
       "address": "Ho Chi Minh",
       "type": {
         "id": 1,
@@ -517,7 +461,6 @@
       "idCard": "987654321",
       "phone": "0912345678",
       "email": "khang.pham@example.com",
-      "customerType": "Gold",
       "address": "Ha Noi",
       "type": {
         "id": 1,
@@ -532,7 +475,6 @@
       "idCard": "456789123",
       "phone": "0965123789",
       "email": "hang.le@example.com",
-      "customerType": "Silver",
       "address": "Hue",
       "type": {
         "id": 3,
@@ -547,7 +489,6 @@
       "idCard": "654123987",
       "phone": "0908765432",
       "email": "bao.hoang@example.com",
-      "customerType": "Member",
       "address": "Can Tho",
       "type": {
         "id": 3,
@@ -562,7 +503,6 @@
       "idCard": "321654987",
       "phone": "0978456123",
       "email": "tram.vo@example.com",
-      "customerType": "Gold",
       "address": "Quang Nam",
       "type": {
         "id": 4,
@@ -577,7 +517,6 @@
       "idCard": "214365879",
       "phone": "0935678912",
       "email": "phuc.dinh@example.com",
-      "customerType": "Platinum",
       "address": "Nha Trang",
       "type": {
         "id": 2,
@@ -592,7 +531,6 @@
       "idCard": "789456123",
       "phone": "0987456321",
       "email": "uyen.ngo@example.com",
-      "customerType": "Silver",
       "address": "Binh Dinh",
       "type": {
         "id": 5,
@@ -604,33 +542,31 @@
       "name": "Bui Quang Huy",
       "birthDay": "1989-01-15",
       "gender": true,
-      "idCard": "159753468",
+      "idCard": "12345680",
       "phone": "0912555789",
       "email": "huy.bui@example.com",
-      "customerType": "Diamond",
-      "address": "TP HCM",
+      "address": "Nha Trang",
       "type": {
         "id": 3,
         "name": "Gold"
       }
     },
     {
-      "id": 10,
-      "name": "Dao Kim Chi",
-      "birthDay": "1996-04-07",
+      "name": "Nguyễn Đăng Thiên An",
+      "birthDay": "2002-12-21",
       "gender": false,
-      "idCard": "753951468",
-      "phone": "0942233445",
-      "email": "chi.dao@example.com",
-      "customerType": "Member",
-      "address": "Da Lat",
+      "idCard": "12345680",
+      "phone": "0794504074",
+      "email": "annguyendang.17.07.2002@gmail.com",
+      "address": "Nha Trang",
       "type": {
         "id": 1,
         "name": "Diamond"
-      }
+      },
+      "id": 10
     }
   ],
-  "customerType": [
+  "customerTypes": [
     {
       "id": 1,
       "name": "Diamond"
@@ -656,31 +592,31 @@
     {
       "id": 1,
       "name": "Massage",
-      "unit": "Gio",
+      "unit": "Giờ",
       "price": 300000
     },
     {
       "id": 2,
       "name": "Karaoke",
-      "unit": "Gio",
+      "unit": "Giờ",
       "price": 200000
     },
     {
       "id": 3,
-      "name": "Thuc an",
-      "unit": "Phan",
+      "name": "Thức ăn",
+      "unit": "Phần",
       "price": 150000
     },
     {
       "id": 4,
-      "name": "Nuoc uong",
+      "name": "Nước uống",
       "unit": "Chai",
       "price": 30000
     },
     {
       "id": 5,
-      "name": "Thue xe tham quan",
-      "unit": "Gio",
+      "name": "Thuê xe tham quan",
+      "unit": "Giờ",
       "price": 500000
     }
   ]
