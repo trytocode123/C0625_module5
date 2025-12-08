@@ -1,0 +1,687 @@
+{
+  "department": [
+    {
+      "id": 1,
+      "name": "Lễ tân"
+    },
+    {
+      "id": 2,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 3,
+      "name": "Chuyên viên"
+    },
+    {
+      "id": 4,
+      "name": "Giám sát"
+    },
+    {
+      "id": 5,
+      "name": "Quản lý"
+    },
+    {
+      "id": 6,
+      "name": "Giám đốc"
+    }
+  ],
+  "level": [
+    {
+      "id": 1,
+      "name": "Trung cấp"
+    },
+    {
+      "id": 2,
+      "name": "Cao đẳng"
+    },
+    {
+      "id": 3,
+      "name": "Đại học"
+    },
+    {
+      "id": 4,
+      "name": "Sau đại học"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Nguyen Van Cu",
+      "dob": "12/12/1990",
+      "idNumber": "123456789",
+      "phoneNumber": "0905123456",
+      "email": "example@gmail.com",
+      "level": {
+        "id": 3,
+        "name": "Dai hoc"
+      },
+      "department": {
+        "id": 4,
+        "name": "Giam sat"
+      },
+      "salary": 12000000
+    },
+    {
+      "id": 2,
+      "name": "Do Anh Truc",
+      "dob": "12/12/1995",
+      "idNumber": "123456789",
+      "phoneNumber": "0905123456",
+      "email": "example@gmail.com",
+      "level": {
+        "id": 4,
+        "name": "Sau dai hoc"
+      },
+      "department": {
+        "id": 6,
+        "name": "Giam doc"
+      },
+      "salary": 12000000
+    },
+    {
+      "id": 3,
+      "name": "Nguyen Van Nam",
+      "dob": "12/12/1988",
+      "idNumber": "123456789",
+      "phoneNumber": "0905123456",
+      "email": "example@gmail.com",
+      "level": {
+        "id": 1,
+        "name": "Trung cap"
+      },
+      "department": {
+        "id": 2,
+        "name": "Phuc vu"
+      },
+      "salary": 12000000
+    },
+    {
+      "id": 4,
+      "name": "Do Thi Hanh",
+      "dob": "12/12/1992",
+      "idNumber": "123456789",
+      "phoneNumber": "0905123456",
+      "email": "example@gmail.com",
+      "level": {
+        "id": 2,
+        "name": "Cao dang"
+      },
+      "department": {
+        "id": 1,
+        "name": "Le tan"
+      },
+      "salary": 12000000
+    },
+    {
+      "id": 5,
+      "name": "Do Le Quynh",
+      "dob": "12/12/1998",
+      "idNumber": "123456789",
+      "phoneNumber": "0905123456",
+      "email": "example@gmail.com",
+      "level": {
+        "id": 3,
+        "name": "Dai hoc"
+      },
+      "department": {
+        "id": 5,
+        "name": "Quan ly"
+      },
+      "salary": 12000000
+    }
+  ],
+  "villas": [
+    {
+      "id": 1,
+      "name": "Villa Sunrise Palm",
+      "area": 30,
+      "fee": 1800000,
+      "capacity": 6,
+      "type": "Monthly",
+      "standard": "Luxury",
+      "description": "Không gian thoáng đãng, nội thất hiện đại, gần hồ bơi trung tâm",
+      "arePool": 6,
+      "floor": 2
+    },
+    {
+      "id": 2,
+      "name": "Villa Ocean View",
+      "area": 35,
+      "fee": 2500000,
+      "capacity": 8,
+      "type": "Daily",
+      "standard": "VIP",
+      "description": "View biển thoáng đãng, có hồ bơi riêng",
+      "arePool": 10,
+      "floor": 3
+    },
+    {
+      "id": 3,
+      "name": "Villa Luxury Garden",
+      "area": 30,
+      "fee": 1800000,
+      "capacity": 6,
+      "type": "Monthly",
+      "standard": "Luxury",
+      "description": "Khu vườn rộng, không gian yên tĩnh",
+      "arePool": 5,
+      "floor": 2
+    },
+    {
+      "id": 4,
+      "name": "Villa Sunset Hill",
+      "area": 50,
+      "fee": 3200000,
+      "capacity": 10,
+      "type": "Weekly",
+      "standard": "Premium",
+      "description": "View đồi hoàng hôn, nội thất hiện đại",
+      "arePool": 12,
+      "floor": 4
+    },
+    {
+      "id": 5,
+      "name": "Villa Family Stay",
+      "area": 28,
+      "fee": 1500000,
+      "capacity": 6,
+      "type": "Daily",
+      "standard": "Standard",
+      "description": "Phù hợp gia đình nhỏ, tiện ích đầy đủ",
+      "arePool": 4,
+      "floor": 2
+    },
+    {
+      "id": 6,
+      "name": "Villa Mountain Breeze",
+      "area": 45,
+      "fee": 2800000,
+      "capacity": 9,
+      "type": "Monthly",
+      "standard": "High-class",
+      "description": "Gió núi mát lành, hồ bơi vô cực",
+      "arePool": 15,
+      "floor": 3
+    }
+  ],
+  "houses": [
+    {
+      "id": 1,
+      "name": "House Green Garden",
+      "area": 25,
+      "fee": 900000,
+      "capacity": 4,
+      "type": "Monthly",
+      "standard": "Giường đôi, bàn làm việc, bếp mini, máy giặt chung, bãi xe rộng",
+      "description": "Nhà tiện nghi cơ bản, phù hợp gia đình nhỏ",
+      "floor": 2
+    },
+    {
+      "id": 2,
+      "name": "House City Central",
+      "area": 32,
+      "fee": 1500000,
+      "capacity": 6,
+      "type": "Weekly",
+      "standard": "Nội thất gỗ cao cấp, sofa lớn, lò vi sóng, TV 55 inch, máy lọc nước",
+      "description": "Nhà rộng rãi, gần trung tâm thương mại",
+      "floor": 3
+    },
+    {
+      "id": 3,
+      "name": "House Lake View",
+      "area": 28,
+      "fee": 1300000,
+      "capacity": 5,
+      "type": "Monthly",
+      "standard": "Giường Queen size, ban công riêng, máy sấy quần áo",
+      "description": "View hồ siêu đẹp, không gian thoáng mát",
+      "floor": 2
+    },
+    {
+      "id": 4,
+      "name": "House Riverside Palm",
+      "area": 35,
+      "fee": 1600000,
+      "capacity": 7,
+      "type": "Monthly",
+      "standard": "Giường King size, máy lạnh, bếp riêng, tủ lạnh lớn",
+      "description": "Nhà sát bờ sông, thoáng mát quanh năm",
+      "floor": 3
+    },
+    {
+      "id": 5,
+      "name": "House Sunny Side",
+      "area": 22,
+      "fee": 800000,
+      "capacity": 3,
+      "type": "Daily",
+      "standard": "Giường đôi, máy lạnh, TV 40 inch",
+      "description": "Nhà nhỏ gọn, đầy đủ tiện nghi, phù hợp khách du lịch",
+      "floor": 1
+    },
+    {
+      "id": 6,
+      "name": "House Mountain Wind",
+      "area": 40,
+      "fee": 1800000,
+      "capacity": 6,
+      "type": "Monthly",
+      "standard": "Giường lớn, phòng khách rộng, bếp đầy đủ",
+      "description": "Nhà gần đồi núi, không khí trong lành",
+      "floor": 2
+    },
+    {
+      "id": 7,
+      "name": "House Modern Loft",
+      "area": 30,
+      "fee": 1400000,
+      "capacity": 4,
+      "type": "Weekly",
+      "standard": "Nội thất hiện đại, bếp từ, máy giặt riêng",
+      "description": "Thiết kế dạng loft trẻ trung và sang trọng",
+      "floor": 2
+    },
+    {
+      "id": 8,
+      "name": "House Ocean Breeze",
+      "area": 38,
+      "fee": 1900000,
+      "capacity": 7,
+      "type": "Monthly",
+      "standard": "Giường lớn, máy lạnh, ban công hướng biển",
+      "description": "Nhà gần biển, view tuyệt đẹp",
+      "floor": 3
+    },
+    {
+      "id": 9,
+      "name": "House Family Cozy",
+      "area": 27,
+      "fee": 1100000,
+      "capacity": 5,
+      "type": "Monthly",
+      "standard": "Giường đôi, sofa, tủ lạnh mini",
+      "description": "Nhà ấm cúng, thích hợp cho gia đình 4–5 người",
+      "floor": 2
+    },
+    {
+      "id": 10,
+      "name": "House Downtown Corner",
+      "area": 33,
+      "fee": 1700000,
+      "capacity": 6,
+      "type": "Weekly",
+      "standard": "Nội thất cao cấp, máy lạnh, lò vi sóng",
+      "description": "Nhà góc phố trung tâm, tiện đi lại",
+      "floor": 3
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Room Cozy Studio",
+      "area": 18,
+      "fee": 500000,
+      "capacity": 2,
+      "type": "Daily",
+      "standard": "Standard",
+      "description": "Phòng studio nhỏ gọn, sạch sẽ, đầy đủ nội thất cơ bản",
+      "freeService": {
+        "id": 4,
+        "name": "Nuoc uong",
+        "unit": "Chai",
+        "price": 30000
+      }
+    },
+    {
+      "id": 2,
+      "name": "Room Premium Couple",
+      "area": 22,
+      "fee": 700000,
+      "capacity": 3,
+      "type": "Daily",
+      "standard": "Premium",
+      "description": "Phòng dành cho cặp đôi, có ban công thoáng",
+      "freeService": {
+        "id": 4,
+        "name": "Nuoc uong",
+        "unit": "Chai",
+        "price": 30000
+      }
+    },
+    {
+      "id": 3,
+      "name": "Room Business Deluxe",
+      "area": 25,
+      "fee": 850000,
+      "capacity": 2,
+      "type": "Daily",
+      "standard": "Luxury",
+      "description": "Phòng cao cấp với bàn làm việc chuyên nghiệp",
+      "freeService": {
+        "id": 5,
+        "name": "Thue xe tham quan",
+        "unit": "Gio",
+        "price": 500000
+      }
+    },
+    {
+      "id": 4,
+      "name": "Room Garden View",
+      "area": 20,
+      "fee": 600000,
+      "capacity": 2,
+      "type": "Daily",
+      "standard": "Standard",
+      "description": "Phòng hướng vườn mát mẻ, nội thất gỗ nhẹ nhàng",
+      "freeService": {
+        "id": 5,
+        "name": "Thue xe tham quan",
+        "unit": "Gio",
+        "price": 500000
+      }
+    },
+    {
+      "id": 5,
+      "name": "Room Modern Twin",
+      "area": 24,
+      "fee": 750000,
+      "capacity": 3,
+      "type": "Daily",
+      "standard": "Premium",
+      "description": "Phòng hai giường, không gian hiện đại và ấm cúng",
+      "freeService": {
+        "id": 4,
+        "name": "Nuoc uong",
+        "unit": "Chai",
+        "price": 30000
+      }
+    },
+    {
+      "id": 6,
+      "name": "Room Ocean Light",
+      "area": 21,
+      "fee": 650000,
+      "capacity": 2,
+      "type": "Daily",
+      "standard": "Standard",
+      "description": "Phòng sáng sủa, gần biển, view thoáng",
+      "freeService": {
+        "id": 5,
+        "name": "Thue xe tham quan",
+        "unit": "Gio",
+        "price": 500000
+      }
+    },
+    {
+      "id": 7,
+      "name": "Room Family Comfort",
+      "area": 28,
+      "fee": 900000,
+      "capacity": 4,
+      "type": "Daily",
+      "standard": "Premium",
+      "description": "Phòng rộng phù hợp gia đình nhỏ, trang bị đủ tiện nghi",
+      "freeService": {
+        "id": 3,
+        "name": "Thuc an",
+        "unit": "Phan",
+        "price": 150000
+      }
+    },
+    {
+      "id": 8,
+      "name": "Room Sunset Deluxe",
+      "area": 26,
+      "fee": 950000,
+      "capacity": 3,
+      "type": "Daily",
+      "standard": "Luxury",
+      "description": "Phòng hướng hoàng hôn, nội thất cao cấp",
+      "freeService": {
+        "id": 1,
+        "name": "Massage",
+        "unit": "Gio",
+        "price": 300000
+      }
+    },
+    {
+      "id": 9,
+      "name": "Room Minimal Corner",
+      "area": 19,
+      "fee": 550000,
+      "capacity": 2,
+      "type": "Daily",
+      "standard": "Standard",
+      "description": "Phòng nhỏ gọn phong cách tối giản, phù hợp người đi công tác",
+      "freeService": {
+        "id": 2,
+        "name": "Karaoke",
+        "unit": "Gio",
+        "price": 200000
+      }
+    },
+    {
+      "id": 10,
+      "name": "Room Sky Loft",
+      "area": 30,
+      "fee": 1200000,
+      "capacity": 3,
+      "type": "Daily",
+      "standard": "Luxury",
+      "description": "Phòng loft cao cấp, trần cao, cửa kính toàn cảnh",
+      "freeService": {
+        "id": 5,
+        "name": "Thue xe tham quan",
+        "unit": "Gio",
+        "price": 500000
+      }
+    }
+  ],
+  "customer": [
+    {
+      "id": 1,
+      "name": "Nguyen Van An",
+      "birthDay": "1990-03-12",
+      "gender": true,
+      "idCard": "012345678",
+      "phone": "0905123456",
+      "email": "an.nguyen@example.com",
+      "customerType": "Diamond",
+      "address": "Da Nang",
+      "type": {
+        "id": 2,
+        "name": "Platinium"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Tran Thi Bich",
+      "birthDay": "1995-07-20",
+      "gender": false,
+      "idCard": "123456789",
+      "phone": "0932456789",
+      "email": "bich.tran@example.com",
+      "customerType": "Platinum",
+      "address": "Ho Chi Minh",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Pham Minh Khang",
+      "birthDay": "1988-11-05",
+      "gender": true,
+      "idCard": "987654321",
+      "phone": "0912345678",
+      "email": "khang.pham@example.com",
+      "customerType": "Gold",
+      "address": "Ha Noi",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Le Thu Hang",
+      "birthDay": "1992-02-18",
+      "gender": false,
+      "idCard": "456789123",
+      "phone": "0965123789",
+      "email": "hang.le@example.com",
+      "customerType": "Silver",
+      "address": "Hue",
+      "type": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Hoang Gia Bao",
+      "birthDay": "1985-09-30",
+      "gender": true,
+      "idCard": "654123987",
+      "phone": "0908765432",
+      "email": "bao.hoang@example.com",
+      "customerType": "Member",
+      "address": "Can Tho",
+      "type": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Vo Ngoc Tram",
+      "birthDay": "1998-12-12",
+      "gender": false,
+      "idCard": "321654987",
+      "phone": "0978456123",
+      "email": "tram.vo@example.com",
+      "customerType": "Gold",
+      "address": "Quang Nam",
+      "type": {
+        "id": 4,
+        "name": "Silver"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Dinh Huu Phuc",
+      "birthDay": "1993-05-09",
+      "gender": true,
+      "idCard": "214365879",
+      "phone": "0935678912",
+      "email": "phuc.dinh@example.com",
+      "customerType": "Platinum",
+      "address": "Nha Trang",
+      "type": {
+        "id": 2,
+        "name": "Platinium"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Ngo Thanh Uyen",
+      "birthDay": "1997-10-25",
+      "gender": false,
+      "idCard": "789456123",
+      "phone": "0987456321",
+      "email": "uyen.ngo@example.com",
+      "customerType": "Silver",
+      "address": "Binh Dinh",
+      "type": {
+        "id": 5,
+        "name": "Member"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Bui Quang Huy",
+      "birthDay": "1989-01-15",
+      "gender": true,
+      "idCard": "159753468",
+      "phone": "0912555789",
+      "email": "huy.bui@example.com",
+      "customerType": "Diamond",
+      "address": "TP HCM",
+      "type": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Dao Kim Chi",
+      "birthDay": "1996-04-07",
+      "gender": false,
+      "idCard": "753951468",
+      "phone": "0942233445",
+      "email": "chi.dao@example.com",
+      "customerType": "Member",
+      "address": "Da Lat",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "attachedServices": [
+    {
+      "id": 1,
+      "name": "Massage",
+      "unit": "Gio",
+      "price": 300000
+    },
+    {
+      "id": 2,
+      "name": "Karaoke",
+      "unit": "Gio",
+      "price": 200000
+    },
+    {
+      "id": 3,
+      "name": "Thuc an",
+      "unit": "Phan",
+      "price": 150000
+    },
+    {
+      "id": 4,
+      "name": "Nuoc uong",
+      "unit": "Chai",
+      "price": 30000
+    },
+    {
+      "id": 5,
+      "name": "Thue xe tham quan",
+      "unit": "Gio",
+      "price": 500000
+    }
+  ]
+}

@@ -36,7 +36,7 @@
       "ngaySinh": "1998-12-20",
       "gia": 18000000,
       "position": {
-        "id": "1",
+        "id": 1,
         "name": "Tiền đạo"
       }
     },
@@ -47,18 +47,18 @@
       "ngaySinh": "2000-07-21",
       "gia": 20000000,
       "position": {
-        "id": 1,
-        "name": "Tiền đạo"
+        "id": 3,
+        "name": "Thủ môn"
       }
     },
     {
       "id": 4,
       "maCauThu": "PL004",
-      "ten": "Cristiano Ronaldo",
+      "ten": "Cristiano Messi",
       "ngaySinh": "1985-02-05",
       "gia": 15000000,
       "position": {
-        "id": "1",
+        "id": 1,
         "name": "Tiền đạo"
       }
     },
@@ -85,13 +85,13 @@
       }
     },
     {
-      "maCauThu": "PL009",
+      "maCauThu": "PL010",
       "ten": "Nguyen An",
       "ngaySinh": "2002-12-21",
       "gia": 12312312,
       "position": {
-        "id": 4,
-        "name": "Tiền vệ"
+        "id": 2,
+        "name": "Hậu vệ"
       },
       "id": 7
     }
