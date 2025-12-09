@@ -50,7 +50,6 @@ const RoomListComponent = () => {
                     />
                 </div>
 
-                {/* Tiêu đề + nút thêm */}
                 <div className="d-flex justify-content-between align-items-center my-4">
                     <h3 className="text-uppercase fw-bold mb-0">
                         Danh sách Room nghỉ dưỡng
@@ -59,7 +58,7 @@ const RoomListComponent = () => {
                         to="/rooms/add"
                         className="btn btn-sm btn-success px-3"
                     >
-                        + Thêm
+                        + Thêm Room
                     </Link>
                 </div>
 

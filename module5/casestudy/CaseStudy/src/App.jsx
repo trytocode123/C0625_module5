@@ -18,6 +18,9 @@ import AddHouseComponent from "./component/AddHouseComponent.jsx";
 import CustomerListComponent from "./component/CustomerListComponent.jsx";
 import CustomerDetailComponent from "./component/CustomerDetailComponent.jsx";
 import AddCustomerComponent from "./component/AddCustomerComponent.jsx";
+import ContractListComponent from "./component/ContractListComponent.jsx";
+import ContractDetailComponent from "./component/ContractDetailComponent.jsx";
+import AddContractComponent from "./component/AddContractComponent.jsx";
 
 function App() {
 
@@ -37,6 +40,9 @@ function App() {
                 <Route path={"/customers/:searchName?"} element={<CustomerListComponent/>}/>
                 <Route path={"/customers/detail/:id"} element={<CustomerDetailComponent/>}/>
                 <Route path={"/customers/add"} element={<AddCustomerComponent/>}/>
+                <Route path={"/contracts/:searchName?"} element={<ContractListComponent/>}/>
+                <Route path={"/contracts/detail/:id"} element={<ContractDetailComponent/>}/>
+                <Route path={"/contracts/add"} element={<AddContractComponent/>}/>
                 <Route path={"/"} element={<HomeComponent/>}/>
             </Routes>
             <ToastContainer/>

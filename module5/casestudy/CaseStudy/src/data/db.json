@@ -406,22 +406,6 @@
         "price": 500000
       },
       "id": 10
-    },
-    {
-      "name": "fghfgh",
-      "area": "12312312",
-      "fee": "0123123",
-      "capacity": "12121",
-      "type": "ghghgh",
-      "standard": "sfdsdfsfsd",
-      "description": "sdfsdfsd",
-      "freeService": {
-        "id": 2,
-        "name": "Karaoke",
-        "unit": "Giờ",
-        "price": 200000
-      },
-      "id": 11
     }
   ],
   "customers": [
@@ -550,20 +534,6 @@
         "id": 3,
         "name": "Gold"
       }
-    },
-    {
-      "name": "Nguyễn Đăng Thiên An",
-      "birthDay": "2002-12-21",
-      "gender": false,
-      "idCard": "12345680",
-      "phone": "0794504074",
-      "email": "annguyendang.17.07.2002@gmail.com",
-      "address": "Nha Trang",
-      "type": {
-        "id": 1,
-        "name": "Diamond"
-      },
-      "id": 10
     }
   ],
   "customerTypes": [
@@ -618,6 +588,142 @@
       "name": "Thuê xe tham quan",
       "unit": "Giờ",
       "price": 500000
+    }
+  ],
+  "contracts": [
+    {
+      "id": 1,
+      "numberContract": 1,
+      "startDate": "2025-12-12",
+      "endDate": "2025-12-15",
+      "preorderMoney": "3000000",
+      "totalPay": 5000000,
+      "service": {
+        "id": 5,
+        "name": "Villa Family Stay",
+        "area": 28,
+        "fee": 1500000,
+        "capacity": 6,
+        "type": "Daily",
+        "standard": "Standard",
+        "description": "Phù hợp gia đình nhỏ, tiện ích đầy ấp",
+        "arePool": 4,
+        "floor": 2
+      },
+      "customer": {
+        "id": 4,
+        "name": "Le Thu Hang",
+        "birthDay": "1992-02-18",
+        "gender": false,
+        "idCard": "456789123",
+        "phone": "0965123789",
+        "email": "hang.le@example.com",
+        "address": "Hue",
+        "type": {
+          "id": 3,
+          "name": "Gold"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "numberContract": 2,
+      "startDate": "2025-12-20",
+      "endDate": "2025-12-25",
+      "preorderMoney": 3000000,
+      "totalPay": 16000000,
+      "service": {
+        "id": 4,
+        "name": "Villa Sunset Hill",
+        "area": 50,
+        "fee": 3200000,
+        "capacity": 10,
+        "type": "Weekly",
+        "standard": "Premium",
+        "description": "View đồi hoàng hôn, nội thất hiện đại",
+        "arePool": 12,
+        "floor": 4
+      },
+      "customer": {
+        "id": 2,
+        "name": "Tran Thi Bich",
+        "birthDay": "1995-07-20",
+        "gender": false,
+        "idCard": "123456789",
+        "phone": "0932456789",
+        "email": "bich.tran@example.com",
+        "address": "Ho Chi Minh",
+        "type": {
+          "id": 1,
+          "name": "Diamond"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "numberContract": 3,
+      "startDate": "2025-11-28",
+      "endDate": "2025-11-30",
+      "preorderMoney": 1500000,
+      "totalPay": 4500000,
+      "service": {
+        "id": 3,
+        "name": "House Lake View",
+        "area": 28,
+        "fee": 1300000,
+        "capacity": 5,
+        "type": "Monthly",
+        "standard": "Giường Queen size, ban công riêng, máy sấy quần áo",
+        "description": "View hồ siêu đẹp, không gian thoáng mát",
+        "floor": 2
+      },
+      "customer": {
+        "id": 5,
+        "name": "Hoang Gia Bao",
+        "birthDay": "1985-09-30",
+        "gender": true,
+        "idCard": "654123987",
+        "phone": "0908765432",
+        "email": "bao.hoang@example.com",
+        "address": "Can Tho",
+        "type": {
+          "id": 3,
+          "name": "Gold"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "numberContract": 4,
+      "startDate": "2025-10-10",
+      "endDate": "2025-10-20",
+      "preorderMoney": 2000000,
+      "totalPay": 9000000,
+      "service": {
+        "id": 1,
+        "name": "House Green Garden",
+        "area": 25,
+        "fee": 900000,
+        "capacity": 4,
+        "type": "Monthly",
+        "standard": "Giường đôi, bàn làm việc, bếp mini, máy giặt chung, bãi xe rộng",
+        "description": "Nhà tiện nghi cơ bản, phù hợp gia đình nhỏ",
+        "floor": 2
+      },
+      "customer": {
+        "id": 3,
+        "name": "Pham Minh Khang",
+        "birthDay": "1988-11-05",
+        "gender": true,
+        "idCard": "987654321",
+        "phone": "0912345678",
+        "email": "khang.pham@example.com",
+        "address": "Ha Noi",
+        "type": {
+          "id": 1,
+          "name": "Diamond"
+        }
+      }
     }
   ]
 }
