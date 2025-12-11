@@ -1,0 +1,98 @@
+{
+  "origins": [
+    {
+      "id": 1,
+      "name": "Việt Nam"
+    },
+    {
+      "id": 2,
+      "name": "Mỹ"
+    }
+  ],
+  "pigs": [
+    {
+      "id": 1,
+      "pigCode": "MH-001",
+      "initTime": "2020-12-01",
+      "initWeight": 10,
+      "endTime": "2020-12-04",
+      "endWeight": 100,
+      "origin": {
+        "id": 1,
+        "name": "Việt Nam"
+      }
+    },
+    {
+      "id": 2,
+      "pigCode": "MH-002",
+      "initTime": "2020-12-11",
+      "initWeight": 10,
+      "endTime": "2020-12-12",
+      "endWeight": 15,
+      "origin": {
+        "id": 1,
+        "name": "Việt Nam"
+      }
+    },
+    {
+      "pigCode": "MH-003",
+      "initTime": "2002-12-21",
+      "initWeight": 10,
+      "endTime": "",
+      "endWeight": 10,
+      "origin": {
+        "id": 1,
+        "name": "Việt Nam"
+      },
+      "id": 4
+    },
+    {
+      "pigCode": "MH-003",
+      "initTime": "2002-12-21",
+      "initWeight": 12,
+      "endTime": "",
+      "endWeight": 12,
+      "origin": {
+        "id": 1,
+        "name": "Việt Nam"
+      },
+      "id": 6
+    },
+    {
+      "pigCode": "MH-003",
+      "initTime": "2002-12-21",
+      "initWeight": 12,
+      "endTime": "",
+      "endWeight": 12,
+      "origin": {
+        "id": 2,
+        "name": "Mỹ"
+      },
+      "id": 7
+    },
+    {
+      "pigCode": "MH-003",
+      "initTime": "2002-12-21",
+      "initWeight": 9.9,
+      "endTime": "",
+      "endWeight": 9.9,
+      "origin": {
+        "id": 1,
+        "name": "Việt Nam"
+      },
+      "id": 8
+    },
+    {
+      "pigCode": "MH-003",
+      "initTime": "2002-12-21",
+      "initWeight": 114,
+      "endTime": "2025-12-27",
+      "endWeight": 125,
+      "origin": {
+        "id": 1,
+        "name": "Việt Nam"
+      },
+      "id": 9
+    }
+  ]
+}

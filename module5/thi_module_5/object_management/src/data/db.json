@@ -1,0 +1,134 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "orderCode": "200",
+      "buyDate": "12-12-2025",
+      "total": 1000,
+      "quantity": 1,
+      "product": {
+        "id": 1,
+        "name": "IphoneX",
+        "price": 1000,
+        "type": "Điện thoại"
+      }
+    },
+    {
+      "id": 2,
+      "orderCode": "202",
+      "buyDate": "12-10-2025",
+      "total": 1000,
+      "quantity": 2,
+      "product": {
+        "id": 2,
+        "name": "Samsung Note 10",
+        "price": 24000,
+        "type": "Điện thoại"
+      }
+    },
+    {
+      "id": 3,
+      "orderCode": "203",
+      "buyDate": "12-09-2025",
+      "total": 2000,
+      "quantity": 3,
+      "product": {
+        "id": 3,
+        "name": "Dell Vostor 5320",
+        "price": 4000,
+        "type": "Laptop"
+      }
+    },
+    {
+      "id": 7,
+      "orderCode": "H123",
+      "total": "123123123",
+      "quantity": "123",
+      "product": {
+        "id": 3,
+        "name": "Dell Vostor 5320",
+        "price": 4000,
+        "type": "Laptop"
+      },
+      "buyDate": "2002-12-21"
+    },
+    {
+      "id": 8,
+      "orderCode": "H222",
+      "total": "13123",
+      "quantity": "1",
+      "product": {
+        "id": 1,
+        "name": "IphoneX",
+        "price": 1000,
+        "type": "Điện thoại"
+      },
+      "buyDate": "2025-12-21"
+    },
+    {
+      "id": 9,
+      "orderCode": "H222",
+      "total": "13123",
+      "quantity": "1",
+      "product": {
+        "id": 2,
+        "name": "Samsung Note 10",
+        "price": 2000,
+        "type": "Điện thoại"
+      },
+      "buyDate": "2025-12-21"
+    },
+    {
+      "id": 10,
+      "orderCode": "545",
+      "total": "13123",
+      "quantity": "1",
+      "product": {
+        "id": 1,
+        "name": "IphoneX",
+        "price": 1000,
+        "type": "Điện thoại"
+      },
+      "buyDate": "2020-12-04"
+    },
+    {
+      "id": 11,
+      "orderCode": "765",
+      "total": "13123",
+      "quantity": "3",
+      "product": {
+        "id": 4,
+        "name": "Oppo F5",
+        "price": 5000,
+        "type": "Laptop"
+      },
+      "buyDate": "0005-12-21"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "IphoneX",
+      "price": 1000,
+      "type": "Điện thoại"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Note 10",
+      "price": 2000,
+      "type": "Điện thoại"
+    },
+    {
+      "id": 3,
+      "name": "Dell Vostor 5320",
+      "price": 4000,
+      "type": "Laptop"
+    },
+    {
+      "id": 4,
+      "name": "Oppo F5",
+      "price": 5000,
+      "type": "Laptop"
+    }
+  ]
+}

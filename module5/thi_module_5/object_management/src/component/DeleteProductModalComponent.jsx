@@ -1,26 +1,26 @@
 import {Button, Modal} from "react-bootstrap";
 import {toast} from "react-toastify";
 import {useNavigate} from "react-router-dom";
-import {deleteContract} from "../service/ContractService.js";
+import {deleteOrder} from "../service/OriginService.js";
 
 
-const DeleteRoomModalComponent = ({show, handleToggleModal, objectDelete, reloadAfterDelete}) => {
+const DeleteProductModalComponent = ({show, handleToggleModal, objectDelete, reloadAfterDelete}) => {
     const navigate = useNavigate();
-    const handleDeleteCustomer = () => {
+    const handleDeleteProduct = () => {
         const fetchData = async () => {
-            const isDeleteSucceed = await deleteContract(objectDelete?.id);
+            const isDeleteSucceed = await deleteOrder(objectDelete?.id);
             if (isDeleteSucceed) {
-                toast.success("Xóa thành công!", {
+                toast.success("Xóa đơn hàng thành công!", {
                     position: "top-right",
                     theme: "colored",
                     autoClose: 3000,
                     closeOnClick: true
                 });
-                navigate("/contracts");
+                navigate("/productList");
             } else {
-                toast.error("Xóa không thành công!", {
+                toast.error("Xóa đơn hàng không thành công!", {
                     position: "top-right",
-                    theme: "dark",
+                    theme: "colored",
                     autoClose: 3000,
                     closeOnClick: true
                 })
@@ -40,8 +40,8 @@ const DeleteRoomModalComponent = ({show, handleToggleModal, objectDelete, reload
 
             <Modal.Body className="pt-0">
                 <div className="alert alert-light border rounded-3 shadow-sm">
-                    Bạn có chắc chắn muốn xóa hợp đồng số
-                    <span className="fw-bold text-danger"> {objectDelete?.numberContract}</span>?
+                    Bạn có chắc chắn muốn xóa heo mã số
+                    <span className="fw-bold text-danger"> {objectDelete?.orderCode}</span>?
                 </div>
             </Modal.Body>
 
@@ -50,7 +50,7 @@ const DeleteRoomModalComponent = ({show, handleToggleModal, objectDelete, reload
                     Đóng
                 </Button>
 
-                <Button variant="danger" className="px-4" onClick={handleDeleteCustomer}>
+                <Button variant="danger" className="px-4" onClick={handleDeleteProduct}>
                     Xóa
                 </Button>
             </Modal.Footer>
@@ -58,4 +58,4 @@ const DeleteRoomModalComponent = ({show, handleToggleModal, objectDelete, reload
     );
 };
 
-export default DeleteRoomModalComponent;
+export default DeleteProductModalComponent;

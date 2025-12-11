@@ -1,13 +1,14 @@
 import {Field, Form, Formik} from "formik";
 import {useEffect, useState} from "react";
-import {useParams, useNavigate} from "react-router";
-import {addContract, editContract, findContractById} from "../service/ContractService.js";
+import {useNavigate} from "react-router";
+import {addContract} from "../service/ContractService.js";
 import {getCustomerList} from "../service/CustomerService.js";
 import {getVillaList} from "../service/VillaService.js";
 import {getHouseList} from "../service/HouseService.js";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import {toast} from "react-toastify";
+import {Button} from "react-bootstrap";
 
 const AddContractComponent = () => {
 
@@ -216,12 +217,12 @@ const AddContractComponent = () => {
                                         >
                                             Quay lại
                                         </button>
-                                        <button
+                                        <Button
                                             type="submit"
                                             className="btn btn-primary"
                                         >
                                             Lưu
-                                        </button>
+                                        </Button>
                                     </div>
                                 </Form>
                             </Formik>
